@@ -4,187 +4,80 @@
 <head>
   <meta charset="utf-8">
   <title>Cooking With Soul</title>
-  <style>
-
-
-
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-  body, html {
-    height: 100%;
-  }
-  body {
-    background-image: radial-gradient(#000000, #ffffff);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #logo {
-    position: absolute;
-    width: 20vw;
-    left: 50%;
-    -ms-transform: translate(-50%, 0%);
-    transform: translate(-50%, 0%);
-  }
-  .btn {
-    top: 15%;
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .btn2 {
-    position: absolute;
-    bottom: 16px;
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .top{
- position: absolute;
-  left: 300px;
-  top: 15px;
-  z-index: -1;
-  }
-
-  .hallo {
-  position: absolute;
-  top: 180px;
-  z-index: -1;
-}
-
-
-#Organism1 {
-    left: 32%;
-  }
-
-  #Organism2 {
-    left: 25%;
-  }
-
- #Organism3 {
-    left: 17%;
-  }
-
-  #Organism4 {
-    left: 8%;
-  }
-
- #Organism5 {
-    left: 4%;
-  }
-
-  #Organism6 {
-    left: 56%;
-  }
-
-  #Organism7 {
-    left: 50%;
-  }
-
- #Organism8 {
-    left: 44%;
-  }
-
-  #Organism9 {
-    left: 38%;
-  }
-
- #Organism10 {
-    left: 61%;
-  }
-
-  #Tool{
-    left: 8%;
-  }
-
-  #Element{
-    left: 22%;
-  }
-
-  #Sense{
-    left: 35%;
-  }
-
-  #Organism{
-    left: 55%;
-  }
-
-  #Back{
-    left: 20px;
-  }
-  #About{
-    right: 20px;
-  }
-
-  .btn:hover {background: transparent;}
-  .btn2:hover {background: transparent;}
-
-  .Tool {color: black;}
-  .Elements {color: black;}
-  .Senses {color: black;}
-  .Organism {color: black;}
-  .Back {color: black;}
-  .About {color: black;}
-
-
-</style>
+  <link rel="stylesheet" type="text/css" href="secondpage.css">
 </head>
 <body>
 
+  <div>
+    <img class="top" id="logo" src="logo.png"/>
+  </div>
 
-    <div> 
-      <img class="top" id="logo" src="logo.png"/>
-    </div>
+  <!-- TOGGLEYTABS -->
+  <div class="upper tabs">
+    <button class="btn tablinks" id="Tooltab" onclick="openTab(event, 'Tool')">Tool</button>
+    <button class="btn tablinks" id="Elementtab" onclick="openTab(event, 'Element')">Element</button>
+    <button class="btn tablinks" id="Sensetab" onclick="openTab(event, 'Sense')">Sense</button>
+    <button class="btn tablinks" id="Organismtab" onclick="openTab(event, 'Organism')">Organism</button>
+  </div>
 
-    <div class="leftside" id="Tool">
-      <button class="btn" id="Tool">Tool</button>
-    </div>
 
-          <div> <img  class="hallo"  id="Organism1"src="01.png" alt="Organism" width="90" height="75">  </div>
-          <div> <img  class="hallo"  id="Organism2" src="02.png" alt="Organism" width="90" height="75">  </div>
-          <div> <img  class="hallo"  id="Organism3" src="03.png" alt="Organism" width="90" height="65">  </div>
-          <div> <img  class="hallo"  id="Organism4" src="04.png" alt="Organism" width="90" height="65">  </div>
-          <div> <img  class="hallo"  id="Organism5" src="05.png" alt="Organism" width="90" height="65">  </div>
-          <div> <img  class="hallo"  id="Organism6"src="01.png" alt="Organism" width="90" height="75">  </div>
-          <div> <img  class="hallo"  id="Organism7" src="02.png" alt="Organism" width="90" height="75">  </div>
-          <div> <img  class="hallo"  id="Organism8" src="03.png" alt="Organism" width="90" height="65">  </div>
-          <div> <img  class="hallo"  id="Organism9" src="04.png" alt="Organism" width="90" height="65">  </div>
-          <div> <img  class="hallo"  id="Organism10" src="05.png" alt="Organism" width="90" height="65">  </div>
-      
+  <!-- WHAT GOES IN THE TOGGLEYTABS -->
+  <div class="tools grid tabcontent" id="Tool">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+  <div class="elements grid tabcontent" id="Element">
+    <h3>Londjjon</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+  <div class="senses grid tabcontent" id="Sense">
+   <img  class="hallo"  id="Sense1" src="sense01.png" alt="Sense" width="90" height="75">
+  </div>
+  <div class="organisms grid tabcontent" id="Organism">
+    <div> <img  class="hallo"  id="Organism1"src="01.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism2" src="02.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism3" src="03.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism4" src="04.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism5" src="05.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism6" src="01.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism7" src="02.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism8" src="03.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism9" src="04.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism10" src="05.png" alt="Organism" width="90" height="65">  </div>
+  </div>
 
-    <div class="leftside" id="element">
-      <button class="btn" id="Element">Element</button>
-      <div class="grid">
-      </div>
-      <button class="btn" id="Sense">Sense</button>
-      <div class="grid">
-      </div>
-      <button class="btn" id="Organism">Organism</button>
-      <div class="grid">
-      </div>
-    </div>
-    <div class="bowl">
+  <div class="bowl">
 
-    </div>
+  </div>
 
-    <div class="bottom">
-      <button onclick="window.location.href='landingpage2.html'" class="btn2" id="Back">Back</button>
+  <div class="bottom">
+    <button onclick="window.location.href='landingpage2.html'" class="btn2" id="Back">Back</button>
       <button onclick="window.location.href='about.html'" class="btn2" id="About">About</button>
     </div>
 
-  </head>
-  <body>
 
-  </body>
-  </html>
+
+    <script>
+    function openTab(evt, whichTab) {
+      // Declare all variables
+      let i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(whichTab).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
