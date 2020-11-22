@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cooking With Soul</title>
-  <link rel="stylesheet" type="text/css" href="secondpage.css">
+  <link rel="stylesheet" type="text/css" href="secondpagenov22-1437.css">
 </head>
 <body>
 
@@ -23,16 +23,17 @@
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
   <div class="tools flex tabcontent" id="Tool">
     <!-- replace the .png's with the ones that correspond to the tools, then delete the extra lines-->
-    <img  class="hallo"  id="Tool1" src="01.png" alt="Tool">
-    <img  class="hallo"  id="Tool2" src="02.png" alt="Tool">
-    <img  class="hallo"  id="Tool3" src="03.png" alt="Tool">
-    <img  class="hallo"  id="Tool4" src="04.png" alt="Tool">
-    <img  class="hallo"  id="Tool5" src="05.png" alt="Tool">
-    <img  class="hallo"  id="Tool6" src="01.png" alt="Tool">
-    <img  class="hallo"  id="Tool7" src="02.png" alt="Tool">
-    <img  class="hallo"  id="Tool8" src="03.png" alt="Tool">
-    <img  class="hallo"  id="Tool9" src="04.png" alt="Tool">
-    <img  class="hallo"  id="Tool10" src="05.png" alt="Tool">
+    <div> <img class="hallo"  id="Organism1" src="01.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism2" src="02.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism3" src="03.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism4" src="04.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism5" src="05.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism6" src="01.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism7" src="02.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism8" src="03.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism9" src="04.png" alt="Organism"/> </div>
+    <div> <img class="hallo"  id="Organism10" src="05.png" alt="Organism"/> </div>
+
   </div>
   <div class="elements flex tabcontent" id="Element">
     <!-- replace the .png's with the ones that correspond to the elements, then delete the extra lines-->
@@ -64,7 +65,7 @@
   <div class="organisms flex tabcontent" id="Organism">
 
     <!-- not using the id's rn but keeping them just in case -->
-    <img  class="hallo"  id="Organism1" src="01.png" alt="Organism">
+    <!-- <img  class="hallo"  id="Organism1" src="01.png" alt="Organism">
     <img  class="hallo"  id="Organism2" src="02.png" alt="Organism">
     <img  class="hallo"  id="Organism3" src="03.png" alt="Organism">
     <img  class="hallo"  id="Organism4" src="04.png" alt="Organism">
@@ -73,7 +74,7 @@
     <img  class="hallo"  id="Organism7" src="02.png" alt="Organism">
     <img  class="hallo"  id="Organism8" src="03.png" alt="Organism">
     <img  class="hallo"  id="Organism9" src="04.png" alt="Organism">
-    <img  class="hallo"  id="Organism10" src="05.png" alt="Organism">
+    <img  class="hallo"  id="Organism10" src="05.png" alt="Organism"> -->
   </div>
 
 <!-- for the bowl/where the creature gets created  -->
@@ -129,59 +130,57 @@
       document.getElementById(sub).style.display = "block";
     }
 
+    // dragging stuff stolen from last semester agnar
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      elmnt.onmousedown = dragMouseDown;
 
-// NOT WORKING DRAG STUFF, FEEL FREE TO UNCOMMENT THE THING TO TEST
-    // // dragging stuff stolen from last semester agnar
-    // function dragElement(elmnt) {
-    //   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    //   elmnt.onmousedown = dragMouseDown;
-    //
-    //   function dragMouseDown(e) {
-    //     e = e || window.event;
-    //     e.preventDefault();
-    //     // get the mouse cursor position at startup:
-    //     pos3 = e.clientX;
-    //     pos4 = e.clientY;
-    //     document.onmouseup = closeDragElement;
-    //     // call a function whenever the cursor moves:
-    //     document.onmousemove = elementDrag;
-    //   }
-    //
-    //   function elementDrag(e) {
-    //     e = e || window.event;
-    //     e.preventDefault();
-    //     // calculate the new cursor position:
-    //     pos1 = pos3 - e.clientX;
-    //     pos2 = pos4 - e.clientY;
-    //     pos3 = e.clientX;
-    //     pos4 = e.clientY;
-    //     // set the element's new position:
-    //     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    //     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    //   }
-    //
-    //   function closeDragElement() {
-    //     /* stop moving when mouse button is released:*/
-    //     document.onmouseup = null;
-    //     document.onmousemove = null;
-    //   }
-    // }
-    //
-    // window.addEventListener('DOMContentLoaded', (event) => {
-    //   console.log('DOM fully loaded and parsed');
-    //   //Make the DIV element draggagle:
-    //   dragElement(document.getElementById("Organism1"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism2"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism3"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism4"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism5"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism6"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism7"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism8"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism9"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism10"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //
-    // });
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DOM fully loaded and parsed');
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("Organism1"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism2"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism3"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism4"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism5"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism6"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism7"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism8"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism9"));    /* Be sure that the div id is the same as the getElementById here :*/
+      dragElement(document.getElementById("Organism10"));    /* Be sure that the div id is the same as the getElementById here :*/
+
+    });
 
     </script>
   </body>

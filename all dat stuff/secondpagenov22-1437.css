@@ -47,7 +47,7 @@ body {
 }
 
 /* the container for the flexbox images */
-.flex {
+/* .flex {
   display: none;
   flex-wrap: wrap;
   padding: 1vw;
@@ -58,17 +58,24 @@ body {
 }
 
 /* the contents for the flexbox */
-.hallo {
+/* .hallo {
   height: 10vh;
   z-index: -1;
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
   padding: 1vw;
+} */
+.hallo {
+position: absolute;
+top: 180px;
+z-index: -1;
+width: 90px;
+height: auto;
 }
 
 /* the original placing for the images who are now in flexboxes */
-/* #Organism1 {
+#Organism1 {
   left: 32%;
 }
 
@@ -106,7 +113,8 @@ body {
 
 #Organism10 {
   left: 61%;
-} */
+}
+
 
 /* clicky tab stuff */
 #Tooltab {
