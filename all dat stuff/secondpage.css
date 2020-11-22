@@ -40,11 +40,7 @@ body {
   z-index: -1;
 }
 
-.hallo {
-  position: absolute;
-  top: 180px;
-  z-index: -1;
-}
+
 /* current tab */
 .tabs button.active {
   background-color: pink;
@@ -55,8 +51,33 @@ body {
   display: none;
 }
 
+.flex {
+  display: none;
+  flex-wrap: wrap;
+  padding: 1vw;
+  position: absolute;
+  top: 18%;
+  justify-content: center;
+  width: 100%
+}
 
-#Organism1 {
+
+.hallo {
+  /* width: 15vw; */
+  height: 10vh;
+  /* top: 180px; */
+  z-index: -1;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 1vw;
+}
+
+img.hallo {
+
+}
+
+/* #Organism1 {
   left: 32%;
 }
 
@@ -94,7 +115,7 @@ body {
 
 #Organism10 {
   left: 61%;
-}
+} */
 
 
 /* clicky tab stuff */

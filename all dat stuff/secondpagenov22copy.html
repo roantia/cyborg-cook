@@ -22,29 +22,29 @@
 
 
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
-  <div class="tools flex tabcontent" id="Tool">
+  <div class="tools grid tabcontent" id="Tool">
     <!-- put the stuff for the tools here, maybe use a css grid layout? -->
   </div>
-  <div class="elements flex tabcontent" id="Element">
+  <div class="elements grid tabcontent" id="Element">
     <!-- put the pngs for element here, maybe use a css grid layout? -->
 
   </div>
-  <div class="senses flex tabcontent" id="Sense">
+  <div class="senses grid tabcontent" id="Sense">
    <img  class="hallo"  id="Sense1" src="sense01.png" alt="Sense" width="90" height="75">
   </div>
-  <div class="organisms flex tabcontent" id="Organism">
+  <div class="organisms grid tabcontent" id="Organism">
 
     <!-- i dont think this is the best way to have the images? not sure tho -->
-    <img  class="hallo"  id="Organism1" src="01.png" alt="Organism">
-    <img  class="hallo"  id="Organism2" src="02.png" alt="Organism">
-    <img  class="hallo"  id="Organism3" src="03.png" alt="Organism">
-    <img  class="hallo"  id="Organism4" src="04.png" alt="Organism">
-    <img  class="hallo"  id="Organism5" src="05.png" alt="Organism">
-    <img  class="hallo"  id="Organism6" src="01.png" alt="Organism">
-    <img  class="hallo"  id="Organism7" src="02.png" alt="Organism">
-    <img  class="hallo"  id="Organism8" src="03.png" alt="Organism">
-    <img  class="hallo"  id="Organism9" src="04.png" alt="Organism">
-    <img  class="hallo"  id="Organism10" src="05.png" alt="Organism">
+    <div> <img  class="hallo"  id="Organism1"src="01.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism2" src="02.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism3" src="03.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism4" src="04.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism5" src="05.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism6" src="01.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism7" src="02.png" alt="Organism" width="90" height="75">  </div>
+    <div> <img  class="hallo"  id="Organism8" src="03.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism9" src="04.png" alt="Organism" width="90" height="65">  </div>
+    <div> <img  class="hallo"  id="Organism10" src="05.png" alt="Organism" width="90" height="65">  </div>
   </div>
 
   <div class="bowl">
@@ -78,7 +78,7 @@
       }
 
       // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(whichTab).style.display = "flex";
+      document.getElementById(whichTab).style.display = "block";
       evt.currentTarget.className += " active";
     }
   </script>
