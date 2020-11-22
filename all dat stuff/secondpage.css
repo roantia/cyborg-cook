@@ -11,10 +11,12 @@ body {
   position: absolute;
   width: 20vw;
   left: 50%;
+  top: 5%;
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
 }
 
+/* top tab buttons */
 .btn {
   top: 15%;
   position: absolute;
@@ -24,6 +26,7 @@ body {
   cursor: pointer;
 }
 
+/* bottom tab buttons */
 .btn2 {
   position: absolute;
   bottom: 16px;
@@ -32,14 +35,6 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
-.top{
-  position: absolute;
-  left: 300px;
-  top: 15px;
-  z-index: -1;
-}
-
 
 /* current tab */
 .tabs button.active {
@@ -51,6 +46,7 @@ body {
   display: none;
 }
 
+/* the container for the flexbox images */
 .flex {
   display: none;
   flex-wrap: wrap;
@@ -61,7 +57,7 @@ body {
   width: 100%
 }
 
-
+/* the contents for the flexbox */
 .hallo {
   /* width: 15vw; */
   height: 10vh;
@@ -73,10 +69,7 @@ body {
   padding: 1vw;
 }
 
-img.hallo {
-
-}
-
+/* the original placing for the images who are now in flexboxes */
 /* #Organism1 {
   left: 32%;
 }
@@ -121,21 +114,29 @@ img.hallo {
 /* clicky tab stuff */
 #Tooltab{
   left: 20%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #Elementtab{
   left: 40%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #Sensetab{
   left: 60%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #Organismtab{
   left: 80%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
-
+/* bottom buttons */
 #Back{
   left: 20px;
 }
@@ -146,9 +147,12 @@ img.hallo {
 .btn:hover {background: transparent;}
 .btn2:hover {background: transparent;}
 
+
+/* no longer in use:: */
+/*
 .Tool {color: black;}
 .Elements {color: black;}
 .Senses {color: black;}
 .Organism {color: black;}
 .Back {color: black;}
-.About {color: black;}
+.About {color: black;} */
