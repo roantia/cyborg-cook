@@ -36,7 +36,7 @@
     <img  class="hallo"  id="Tool10" src="05.png" alt="Tool">
 
   </div>
-  <div class="Tools flex tabcontent" id="Element">
+  <div class="elements flex tabcontent" id="Element">
     <!-- replace the .png's with the ones that correspond to the elements, then delete the extra lines-->
     <img  class="hallo"  id="Element1" src="01.png" alt="Element">
     <img  class="hallo"  id="Element2" src="02.png" alt="Element">
@@ -87,9 +87,15 @@
 <!-- bottom buttons -->
   <div class="bottom">
     <button onclick="window.location.href='landingpage2.html'" class="btn2" id="Back">Back</button>
-      <button onclick="window.location.href='about.html'" class="btn2" id="About">About</button>
-    </div>
+    <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">About</button>
+  </div>
 
+  <!-- the stuff about us goes here:::: -->
+  <div class="abtcontent subwindow" id="Aboutsub">
+    <h1>Who we are</h1>
+    <p>this is a project about whatever</p>
+    <button class="btn2" onclick="this.parentElement.style.display='none'">Close About</button>
+  </div>
 
 
     <script>
@@ -115,6 +121,22 @@
       document.getElementById(whichTab).style.display = "flex";
       evt.currentTarget.className += " active";
     }
-  </script>
-</body>
-</html>
+
+    function openSub(evt, sub) {
+      let i, subcontent, sublink;
+
+      // Get all elements with class="buttonlink" and remove the class "active"
+      buttonlink = document.getElementsByClassName("buttonlink");
+      for (i = 0; i < buttonlink.length; i++) {
+        buttonlink[i].className = buttonlink[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(sub).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+
+    </script>
+  </body>
+  </html>
