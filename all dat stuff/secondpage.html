@@ -93,7 +93,7 @@
   <!-- the stuff about us goes here:::: -->
   <div class="abtcontent subwindow" id="Aboutsub">
     <h1>Who we are</h1>
-    <p>this is a project about whatever</p>
+    <p>this is a project about cyborgs</p>
     <button class="btn2" onclick="this.parentElement.style.display='none'">Close About</button>
   </div>
 
@@ -124,16 +124,8 @@
 
     function openSub(evt, sub) {
       let i, subcontent, sublink;
-
-      // Get all elements with class="buttonlink" and remove the class "active"
-      buttonlink = document.getElementsByClassName("buttonlink");
-      for (i = 0; i < buttonlink.length; i++) {
-        buttonlink[i].className = buttonlink[i].className.replace(" active", "");
-      }
-
       // Show the current tab, and add an "active" class to the button that opened the tab
       document.getElementById(sub).style.display = "block";
-      evt.currentTarget.className += " active";
     }
 
 
