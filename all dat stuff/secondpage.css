@@ -39,6 +39,8 @@ body {
 /* current tab */
 .tabs button.active {
   background-color: pink;
+  border-radius: 5px;
+
 }
 
 /* tab content default */
@@ -147,7 +149,7 @@ body {
 }
 
 .ui-state-highlight{
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 
 }
 
