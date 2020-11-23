@@ -5,10 +5,27 @@
   <meta charset="utf-8">
   <title>Cooking With Soul</title>
   <link rel="stylesheet" type="text/css" href="secondpage.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script>
+  $( function() {
+      $( "#draggable" ).draggable();
+      $( "#droppable" ).droppable({
+        drop: function( event, ui ) {
+          $( this )
+            .addClass( "ui-state-highlight" )
+            // .find( "p" )
+            //   .html( "Dropped!" );
+        }
+      });
+    } );
+
+  </script> -->
 </head>
 <body>
 
-  <div>
+  <div id="draggable">
     <img class="top" id="logo" src="logo.png"/>
   </div>
 
@@ -23,61 +40,61 @@
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
   <div class="tools flex tabcontent" id="Tool">
     <!-- replace the .png's with the ones that correspond to the tools, then delete the extra lines-->
-    <img  class="hallo"  id="Tool1" src="01.png" alt="Tool">
-    <img  class="hallo"  id="Tool2" src="02.png" alt="Tool">
-    <img  class="hallo"  id="Tool3" src="03.png" alt="Tool">
-    <img  class="hallo"  id="Tool4" src="04.png" alt="Tool">
-    <img  class="hallo"  id="Tool5" src="05.png" alt="Tool">
-    <img  class="hallo"  id="Tool6" src="01.png" alt="Tool">
-    <img  class="hallo"  id="Tool7" src="02.png" alt="Tool">
-    <img  class="hallo"  id="Tool8" src="03.png" alt="Tool">
-    <img  class="hallo"  id="Tool9" src="04.png" alt="Tool">
-    <img  class="hallo"  id="Tool10" src="05.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool1" src="01.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool2" src="02.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool3" src="03.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool4" src="04.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool5" src="05.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool6" src="01.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool7" src="02.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool8" src="03.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool9" src="04.png" alt="Tool">
+    <img  class="hallo draggable"  id="Tool10" src="05.png" alt="Tool">
   </div>
   <div class="elements flex tabcontent" id="Element">
     <!-- replace the .png's with the ones that correspond to the elements, then delete the extra lines-->
-    <img  class="hallo"  id="Element1" src="01.png" alt="Element">
-    <img  class="hallo"  id="Element2" src="02.png" alt="Element">
-    <img  class="hallo"  id="Element3" src="03.png" alt="Element">
-    <img  class="hallo"  id="Element4" src="04.png" alt="Element">
-    <img  class="hallo"  id="Element5" src="05.png" alt="Element">
-    <img  class="hallo"  id="Element6" src="01.png" alt="Element">
-    <img  class="hallo"  id="Element7" src="02.png" alt="Element">
-    <img  class="hallo"  id="Element8" src="03.png" alt="Element">
-    <img  class="hallo"  id="Element9" src="04.png" alt="Element">
-    <img  class="hallo"  id="Element10" src="05.png" alt="Element">
+    <img  class="hallo draggable"  id="Element1" src="01.png" alt="Element">
+    <img  class="hallo draggable"  id="Element2" src="02.png" alt="Element">
+    <img  class="hallo draggable"  id="Element3" src="03.png" alt="Element">
+    <img  class="hallo draggable"  id="Element4" src="04.png" alt="Element">
+    <img  class="hallo draggable"  id="Element5" src="05.png" alt="Element">
+    <img  class="hallo draggable"  id="Element6" src="01.png" alt="Element">
+    <img  class="hallo draggable"  id="Element7" src="02.png" alt="Element">
+    <img  class="hallo draggable"  id="Element8" src="03.png" alt="Element">
+    <img  class="hallo draggable"  id="Element9" src="04.png" alt="Element">
+    <img  class="hallo draggable"  id="Element10" src="05.png" alt="Element">
 
   </div>
   <div class="senses flex tabcontent" id="Sense">
     <!-- replace the .png's with the ones that correspond to the senses, then delete the extra lines-->
-    <img  class="hallo"  id="Sense1" src="sense01.png" alt="Sense">
-    <img  class="hallo"  id="Sense2" src="02.png" alt="Sense">
-    <img  class="hallo"  id="Sense3" src="03.png" alt="Sense">
-    <img  class="hallo"  id="Sense4" src="04.png" alt="Sense">
-    <img  class="hallo"  id="Sense5" src="05.png" alt="Sense">
-    <img  class="hallo"  id="Sense6" src="01.png" alt="Sense">
-    <img  class="hallo"  id="Sense7" src="02.png" alt="Sense">
-    <img  class="hallo"  id="Sense8" src="03.png" alt="Sense">
-    <img  class="hallo"  id="Sense9" src="04.png" alt="Sense">
-    <img  class="hallo"  id="Sense10" src="05.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense1" src="sense01.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense2" src="02.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense3" src="03.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense4" src="04.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense5" src="05.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense6" src="01.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense7" src="02.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense8" src="03.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense9" src="04.png" alt="Sense">
+    <img  class="hallo draggable"  id="Sense10" src="05.png" alt="Sense">
   </div>
   <div class="organisms flex tabcontent" id="Organism">
 
     <!-- not using the id's rn but keeping them just in case -->
-    <img  class="hallo"  id="Organism1" src="01.png" alt="Organism">
-    <img  class="hallo"  id="Organism2" src="02.png" alt="Organism">
-    <img  class="hallo"  id="Organism3" src="03.png" alt="Organism">
-    <img  class="hallo"  id="Organism4" src="04.png" alt="Organism">
-    <img  class="hallo"  id="Organism5" src="05.png" alt="Organism">
-    <img  class="hallo"  id="Organism6" src="01.png" alt="Organism">
-    <img  class="hallo"  id="Organism7" src="02.png" alt="Organism">
-    <img  class="hallo"  id="Organism8" src="03.png" alt="Organism">
-    <img  class="hallo"  id="Organism9" src="04.png" alt="Organism">
-    <img  class="hallo"  id="Organism10" src="05.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism1" src="01.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism2" src="02.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism3" src="03.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism4" src="04.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism5" src="05.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism6" src="01.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism7" src="02.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism8" src="03.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism9" src="04.png" alt="Organism">
+    <img  class="hallo draggable"  id="Organism10" src="05.png" alt="Organism">
   </div>
 
 <!-- for the bowl/where the creature gets created  -->
-  <div class="bowl">
+  <div id="droppable" class="bowl">
     <img class="thebowl" src="bowl.png" alt="A big metal bowl">
   </div>
 
@@ -97,7 +114,6 @@
     </div>
     <button class="btn2" onclick="this.parentElement.style.display='none'">Close About</button>
   </div>
-
 
     <script>
 
@@ -129,59 +145,22 @@
       document.getElementById(sub).style.display = "block";
     }
 
+  //   $( function() {
+  //   $( "#draggable" ).draggable();
+  // } );
 
-// NOT WORKING DRAG STUFF, FEEL FREE TO UNCOMMENT THE THING TO TEST
-    // // dragging stuff stolen from last semester agnar
-    // function dragElement(elmnt) {
-    //   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    //   elmnt.onmousedown = dragMouseDown;
-    //
-    //   function dragMouseDown(e) {
-    //     e = e || window.event;
-    //     e.preventDefault();
-    //     // get the mouse cursor position at startup:
-    //     pos3 = e.clientX;
-    //     pos4 = e.clientY;
-    //     document.onmouseup = closeDragElement;
-    //     // call a function whenever the cursor moves:
-    //     document.onmousemove = elementDrag;
-    //   }
-    //
-    //   function elementDrag(e) {
-    //     e = e || window.event;
-    //     e.preventDefault();
-    //     // calculate the new cursor position:
-    //     pos1 = pos3 - e.clientX;
-    //     pos2 = pos4 - e.clientY;
-    //     pos3 = e.clientX;
-    //     pos4 = e.clientY;
-    //     // set the element's new position:
-    //     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    //     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    //   }
-    //
-    //   function closeDragElement() {
-    //     /* stop moving when mouse button is released:*/
-    //     document.onmouseup = null;
-    //     document.onmousemove = null;
-    //   }
-    // }
-    //
-    // window.addEventListener('DOMContentLoaded', (event) => {
-    //   console.log('DOM fully loaded and parsed');
-    //   //Make the DIV element draggagle:
-    //   dragElement(document.getElementById("Organism1"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism2"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism3"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism4"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism5"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism6"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism7"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism8"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism9"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //   dragElement(document.getElementById("Organism10"));    /* Be sure that the div id is the same as the getElementById here :*/
-    //
-    // });
+    $( function() {
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+          drop: function( event, ui ) {
+            $( this )
+              .addClass( "ui-state-highlight" )
+              // .find( "p" )
+              //   .html( "Dropped!" );
+          }
+        });
+      } );
+
 
     </script>
   </body>

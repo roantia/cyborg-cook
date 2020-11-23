@@ -39,6 +39,8 @@ body {
 /* current tab */
 .tabs button.active {
   background-color: pink;
+  border-radius: 2px;
+
 }
 
 /* tab content default */

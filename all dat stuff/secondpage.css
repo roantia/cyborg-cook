@@ -146,6 +146,11 @@ body {
   margin-top: 20px;
 }
 
+.ui-state-highlight{
+  transform: rotate(360deg);
+
+}
+
 /* bottom buttons */
 #Back {
   left: 20px;
@@ -182,7 +187,7 @@ body {
   transform: translate(-50%, 0%);
 }
 .abtText {
-  margin-top: 10v;
+  margin-top: 10vh;
   top: 25%;
 
 }
