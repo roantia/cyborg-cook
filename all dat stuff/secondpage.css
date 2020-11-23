@@ -68,6 +68,10 @@ body {
   padding: 1vw;
 }
 
+.dragWrapper {
+  display: inline-block;
+}
+
 /* the original placing for the images who are now in flexboxes */
 /* #Organism1 {
   left: 32%;
