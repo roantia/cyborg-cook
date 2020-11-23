@@ -25,14 +25,12 @@
 </head>
 <body>
 
-  <div>
+  <div class="flexAbs">
     <img onclick="openSub(event, 'Aboutsub')" class="top" id="logo" src="logo.png"/>
   </div>
 
-  <img  class="hallo draggable" id="draggable" src="toolscuts/tool1.png" alt="Coping Saw">
-
   <!-- TOGGLEYTABS -->
-  <div class="upper tabs">
+  <div class="upper tabs flexAbs">
     <button class="btn tablinks" id="Tooltab" onclick="openTab(event, 'Tool')">Tool</button>
     <button class="btn tablinks" id="Elementtab" onclick="openTab(event, 'Element')">Element</button>
     <button class="btn tablinks" id="Sensetab" onclick="openTab(event, 'Sense')">Sense</button>
@@ -40,73 +38,108 @@
   </div>
 
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
-  <div class="tools flex tabcontent" id="Tool">
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="draggable" src="toolscuts/tool1.png" alt="Coping Saw">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool2" src="toolscuts/tool2.png" alt="Clamp">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool3" src="toolscuts/tool3.png" alt="Hand Saw">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool4" src="toolscuts/tool4.png" alt="Drill">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool5" src="toolscuts/tool5.png" alt="Eyelet Puncher (idk bruh dont ask me, Fleur chose these)">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool6" src="toolscuts/tool6.png" alt="Flathead Screwdriver">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool7" src="toolscuts/tool7.png" alt="Pull Saw">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool8" src="toolscuts/tool8.png" alt="Philips Screwdriver">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable" id="Tool9" src="toolscuts/tool9.png" alt="Toy Shovel">
+  <div class="flexAbs">
+    <div class="tools flex tabcontent" id="Tool">
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="draggable" src="toolscuts/tool1.png" alt="Coping Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool2" src="toolscuts/tool2.png" alt="Clamp">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool3" src="toolscuts/tool3.png" alt="Hand Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool4" src="toolscuts/tool4.png" alt="Drill">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool5" src="toolscuts/tool5.png" alt="Eyelet Puncher (idk bruh dont ask me, Fleur chose these)">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool6" src="toolscuts/tool6.png" alt="Flathead Screwdriver">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool7" src="toolscuts/tool7.png" alt="Pull Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool8" src="toolscuts/tool8.png" alt="Philips Screwdriver">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="Tool9" src="toolscuts/tool9.png" alt="Toy Shovel">
+      </div>
     </div>
   </div>
-
-  <div class="elements flex tabcontent" id="Element">
-    <img  class="hallo draggable"  id="Element1" src="elementscuts/fire.png" alt="fire">
-    <img  class="hallo draggable"  id="Element2" src="elementscuts/soil.png" alt="soil">
-    <img  class="hallo draggable"  id="Element3" src="elementscuts/water.png" alt="water">
-    <img  class="hallo draggable"  id="Element4" src="elementscuts/wind.png" alt="wind">
+  <div class="flexAbs">
+    <div class="elements flex tabcontent" id="Element">
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Element1" src="elementscuts/fire.png" alt="fire">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Element2" src="elementscuts/soil.png" alt="soil">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Element3" src="elementscuts/water.png" alt="water">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Element4" src="elementscuts/wind.png" alt="wind">
+      </div>
+    </div>
   </div>
-
-  <div class="senses flex tabcontent" id="Sense">
-    <!-- replace the .png's with the ones that correspond to the senses, then delete the extra lines-->
-    <img  class="hallo draggable"  id="Sense1" src="sense01.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense2" src="02.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense3" src="03.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense4" src="04.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense5" src="05.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense6" src="01.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense7" src="02.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense8" src="03.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense9" src="04.png" alt="Sense">
-    <img  class="hallo draggable"  id="Sense10" src="05.png" alt="Sense">
+  <div class="flexAbs">
+    <div class="senses flex tabcontent" id="Sense">
+      <!-- replace the .png's with the ones that correspond to the senses, then delete the extra lines-->
+      <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense1" src="sensescuts/sense1.png" alt="Sense">
+    </div>
+    <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense2" src="sensescuts/sense2.png" alt="Sense">
+    </div>
+    <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense3" src="sensescuts/sense3.png" alt="Sense">
+    </div>
+    <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense4" src="sensescuts/sense4.png" alt="Sense">
+    </div>
+    <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense5" src="sensescuts/sense5.png" alt="Sense">
+    </div>
+    <div class="dragWrapper">
+      <img  class="hallo draggable"  id="Sense6" src="sensescuts/sense6.png" alt="Sense">
+    </div>
   </div>
-  <div class="organisms flex tabcontent" id="Organism">
-
-    <!-- not using the id's rn but keeping them just in case -->
-    <img  class="hallo draggable"  id="Organism1" src="01.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism2" src="02.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism3" src="03.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism4" src="04.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism5" src="05.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism6" src="01.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism7" src="02.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism8" src="03.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism9" src="04.png" alt="Organism">
-    <img  class="hallo draggable"  id="Organism10" src="05.png" alt="Organism">
   </div>
+  <div class="flexAbs">
+    <div class="organisms flex tabcontent" id="Organism">
 
+      <!-- not using the id's rn but keeping them just in case -->
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism1" src="organismcuts/organism1.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism2" src="organismcuts/organism2.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism3" src="organismcuts/organism3.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism4" src="organismcuts/organism4.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism5" src="organismcuts/organism5.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism6" src="organismcuts/organism6.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism7" src="organismcuts/organism7.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="Organism8" src="organismcuts/organism8.png" alt="Organism">
+    </div>
+  </div>
+  </div>
   <!-- for the bowl/where the creature gets created  -->
-  <div id="droppable" class="bowl">
+  <div id="droppable" class="bowl flexAbs">
     <img class="thebowl" src="bowl.png" alt="A big metal bowl">
   </div>
 
@@ -119,8 +152,10 @@
 
 <!-- the stuff about us goes here:::: -->
 <div class="abtcontent subwindow" id="Aboutsub">
+  <div class="flexAbs">
   <img id="logoabt" src="logo.png"/>
-  <div class="abtText">
+</div>
+  <div class="abtText flexAbs">
     <h1>Who we are</h1>
     <p>this is a project about cyborgs</p>
   </div>
