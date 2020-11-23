@@ -26,7 +26,7 @@
 <body>
 
   <div>
-    <img class="top" id="logo" src="logo.png"/>
+    <img onclick="openSub(event, 'Aboutsub')" class="top" id="logo" src="logo.png"/>
   </div>
 
   <!-- TOGGLEYTABS -->
@@ -39,19 +39,18 @@
 
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
   <div class="tools flex tabcontent" id="Tool">
-    <!-- replace the .png's with the ones that correspond to the tools, then delete the extra lines-->
-    <img  class="hallo draggable"  id="Tool1" src="toolscuts/tool1.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool2" src="toolscuts/tool2.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool3" src="toolscuts/tool3.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool4" src="toolscuts/tool4.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool5" src="toolscuts/tool5.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool6" src="toolscuts/tool6.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool7" src="toolscuts/tool7.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool8" src="toolscuts/tool8.png" alt="Tool">
-    <img  class="hallo draggable"  id="Tool9" src="toolscuts/tool9.png" alt="Tool">
+    <img  class="hallo draggable" id="Tool1" src="toolscuts/tool1.png" alt="Coping Saw">
+    <img  class="hallo draggable" id="Tool2" src="toolscuts/tool2.png" alt="Clamp">
+    <img  class="hallo draggable" id="Tool3" src="toolscuts/tool3.png" alt="Hand Saw">
+    <img  class="hallo draggable" id="Tool4" src="toolscuts/tool4.png" alt="Drill">
+    <img  class="hallo draggable" id="Tool5" src="toolscuts/tool5.png" alt="Eyelet Puncher (idk bruh dont ask me, Fleur chose these)">
+    <img  class="hallo draggable" id="Tool6" src="toolscuts/tool6.png" alt="Flathead Screwdriver">
+    <img  class="hallo draggable" id="Tool7" src="toolscuts/tool7.png" alt="Pull Saw">
+    <img  class="hallo draggable" id="Tool8" src="toolscuts/tool8.png" alt="Philips Screwdriver">
+    <img  class="hallo draggable" id="Tool9" src="toolscuts/tool9.png" alt="Toy Shovel">
   </div>
+
   <div class="elements flex tabcontent" id="Element">
-    <!-- replace the .png's with the ones that correspond to the elements, then delete the extra lines-->
     <img  class="hallo draggable"  id="Element1" src="elementscuts/fire.png" alt="fire">
     <img  class="hallo draggable"  id="Element2" src="elementscuts/soil.png" alt="soil">
     <img  class="hallo draggable"  id="Element3" src="elementscuts/water.png" alt="water">
@@ -93,10 +92,10 @@
 
 
 <!-- bottom buttons -->
-  <div class="bottom">
+  <!-- <div class="bottom">
     <button onclick="window.location.href='landingpage2.html'" class="btn2" id="Back">Back</button>
     <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">About</button>
-  </div>
+  </div> -->
 
   <!-- the stuff about us goes here:::: -->
   <div class="abtcontent subwindow" id="Aboutsub">
@@ -132,6 +131,7 @@
       evt.currentTarget.className += " active";
     }
 
+    // this is the js for the about not-a-popup
     function openSub(evt, sub) {
       let i, subcontent, sublink;
       // Show the current tab, and add an "active" class to the button that opened the tab

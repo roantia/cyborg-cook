@@ -36,11 +36,10 @@ body {
   cursor: pointer;
 }
 
-/* current tab */
+/* current tab indicator !!!!fleur here it is!!!! */
 .tabs button.active {
-  background-color: pink;
-  border-radius: 5px;
-
+  background-color: red;
+  border-radius: 10px;
 }
 
 /* tab content default */
@@ -158,9 +157,7 @@ body {
   left: 20px;
 }
 
-#About {
-  right: 20px;
-}
+
 /* about toggle thingy */
 .abtcontent {
   display: none;
