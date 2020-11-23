@@ -26,10 +26,10 @@ body {
   cursor: pointer;
 }
 
-/* bottom tab buttons */
+/* other buttons */
 .btn2 {
   position: absolute;
-  bottom: 16px;
+  top: 5%;
   border: none;
   background-color: transparent;
   font-size: 16px;
