@@ -202,6 +202,8 @@ $(document).ready(function(){
     drop: function( event, ui ) {
       $( this )
       .addClass( "ui-state-highlight" )
+      // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
+      console.log(ui.draggable.getAttribute("id"));
       // .find( "p" )
       //   .html( "Dropped!" );
     }
