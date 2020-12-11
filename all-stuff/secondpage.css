@@ -184,8 +184,11 @@ body {
 .btn:hover {background: transparent;}
 .btn2:hover {background: transparent;}
 
-.cookbutton{
-  display: none; 
+/* .cookButton{
+  display: none;
+} */
+.showbutton{
+  display: block;
 }
 .cooktime {
   width: 25vw;
