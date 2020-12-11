@@ -209,8 +209,10 @@ $(document).ready(function(){
       // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
       // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
       if(addedIngredients.length >= 3) {
-         $("#cookButton").addClass("showButton");
-       }
+        const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
+        $("#cookButton").addClass("showButton");
+        $("#cookButton a").attr("href", arrayLink);
+      }
     // .find( "p" )
       //   .html( "Dropped!" );
     }
