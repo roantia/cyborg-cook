@@ -143,7 +143,7 @@
     <img class="thebowl" src="bowl.png" alt="A big metal bowl">
   </div>
 
-  <div class="cookButton" id="cookButton">
+  <div  id="cookButton">
     <a href="something"><img class="cooktime" src="cook.png" alt="cook"></a>
   </div>
 
@@ -209,7 +209,7 @@ $(document).ready(function(){
       // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
       // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
       if(addedIngredients.length >= 3) {
-         $("#cookButton").addClass("flexAbs");
+         $("#cookButton").addClass("showButton");
        }
     // .find( "p" )
       //   .html( "Dropped!" );
