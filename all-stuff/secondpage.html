@@ -25,27 +25,31 @@
 </head>
 <body>
 
- <div class="borderBottom">
-  <div class="flexAbs">
-    <img onclick="openSub(event, 'Aboutsub')" class="top" id="logo" src="logo.png"/>
+  <div class="borderBottom">
+    <div class="flexAbs">
+      <img onclick="openSub(event, 'Aboutsub')" class="top" id="logo" src="logo.png"/>
+    </div>
   </div>
-</div>
 
   <!-- TOGGLEYTABS -->
- <div class="Wrap1">
-  <div class="upper tabs flexAbs">
-    <button class="btn tablinks" id="Tooltab" onclick="openTab(event, 'Tool')">Tool</button>
-    <button class="btn tablinks" id="Elementtab" onclick="openTab(event, 'Element')">Element</button>
-    <button class="btn tablinks" id="Sensetab" onclick="openTab(event, 'Sense')">Sense</button>
-    <button class="btn tablinks" id="Organismtab" onclick="openTab(event, 'Organism')">Organism</button>
+    <div class="upper tabs flexTabs">
+      <button class="btn tablinks" id="Tooltab" onclick="openTab(event, 'Tool')">Tool</button>
+      <button class="btn tablinks" id="Elementtab" onclick="openTab(event, 'Element')">Element</button>
+      <button class="btn tablinks" id="Sensetab" onclick="openTab(event, 'Sense')">Sense</button>
+      <button class="btn tablinks" id="Organismtab" onclick="openTab(event, 'Organism')">Organism</button>
+    </div>
+
+  <!-- toggleytab that starts open, and which closes once a tab opens -->
+  <div>
+
   </div>
- </div>
 
   <!-- WHAT GOES IN THE TOGGLEYTABS -->
   <div class="flexAbs">
     <div class="tools flex tabcontent" id="Tool">
       <div class="dragWrapper">
         <img  class="hallo draggable" id="T1" src="toolscuts/tool1.png" alt="Coping Saw">
+        <!-- <div class="hide">I am shown when someone hovers over the div above.</div> -->
       </div>
       <div class="dragWrapper">
         <img  class="hallo draggable" id="T2" src="toolscuts/tool2.png" alt="Clamp">
@@ -93,24 +97,24 @@
     <div class="senses flex tabcontent" id="Sense">
       <!-- replace the .png's with the ones that correspond to the senses, then delete the extra lines-->
       <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S1" src="sensescuts/sense1.png" alt="Sense">
+        <img  class="hallo draggable"  id="S1" src="sensescuts/sense1.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S2" src="sensescuts/sense2.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S3" src="sensescuts/sense3.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S4" src="sensescuts/sense4.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S5" src="sensescuts/sense5.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S6" src="sensescuts/sense6.png" alt="Sense">
+      </div>
     </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S2" src="sensescuts/sense2.png" alt="Sense">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S3" src="sensescuts/sense3.png" alt="Sense">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S4" src="sensescuts/sense4.png" alt="Sense">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S5" src="sensescuts/sense5.png" alt="Sense">
-    </div>
-    <div class="dragWrapper">
-      <img  class="hallo draggable"  id="S6" src="sensescuts/sense6.png" alt="Sense">
-    </div>
-  </div>
   </div>
   <div class="flexAbs">
     <div class="organisms flex tabcontent" id="Organism">
@@ -139,17 +143,29 @@
       </div>
       <div class="dragWrapper">
         <img  class="hallo draggable"  id="O8" src="organismcuts/organism8.png" alt="Organism">
+      </div>
     </div>
   </div>
-  </div>
   <!-- for the bowl/where the creature gets created  -->
-  <div id="droppable" class="bowl flexAbs">
-    <img class="thebowl" src="bowl.png" alt="A big metal bowl">
-  </div>
 
-  <div  id="cookButton">
+  <!-- div for the two columns -->
+  <div class="flexBowl">
+  <div id="droppable" class="bowl">
+    <img class="thebowl" src="bowl.png" alt="A big metal bowl">
+	</div>
+  <div class="infoBox">
+  	  <h1>Build your Cyborg </h1>
+      <p> Drag at least three ingredients onto the plate</p>
+  	  <div id="hT1" class="hide">I am shown when someone hovers over the div above.</div>
+      <div id="hT2" class="hide">I am shown when you hover over the div above.</div>
+      <div  id="cookButton">
+        <a href="something"><img class="cooktime" src="cook.png" alt="cook"></a>
+      </div>
+</div>
+
+  <!-- <div  id="cookButton">
     <a href="something"><img class="cooktime" src="cook.png" alt="cook"></a>
-  </div>
+  </div> -->
 
   <!-- bottom buttons -->
   <!-- <div class="bottom">
@@ -160,8 +176,8 @@
 <!-- the stuff about us goes here:::: -->
 <div class="abtcontent subwindow" id="Aboutsub">
   <div class="flexAbs">
-  <img id="logoabt" src="logo.png"/>
-</div>
+    <img id="logoabt" src="logo.png"/>
+  </div>
   <div class="abtText flexAbs">
     <h1>Who we are</h1>
     <p>this is a project about cyborgs</p>
@@ -193,6 +209,9 @@ function openTab(evt, whichTab) {
   evt.currentTarget.className += " active";
 }
 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("Tooltab").click();
+
 // this is the js for the about not-a-popup
 function openSub(evt, sub) {
   let i, subcontent, sublink;
@@ -206,6 +225,8 @@ $(document).ready(function(){
     drop: function( event, ui ) {
       $( this )
       .addClass( "ui-state-highlight" )
+      .find( "p" )
+            .html( "Dropped!" );
       // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
       console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
       // ADD THE ID TO THE ARRAY
@@ -217,8 +238,7 @@ $(document).ready(function(){
         $("#cookButton").addClass("showButton");
         $("#cookButton a").attr("href", arrayLink);
       }
-    // .find( "p" )
-      //   .html( "Dropped!" );
+
     }
   });
 });
@@ -231,6 +251,22 @@ $(document).ready(function(){
 //   $( "#draggable" ).draggable();
 //
 // } );
+let hoverelseT1 = document.getElementById("T1");
+hoverelseT1.addEventListener("mouseover", function( event ) {
+  document.querySelector('#hT1').style.display = "block"
+}, false);
+hoverelseT1.addEventListener("mouseleave", function( event ) {
+  document.querySelector('#hT1').style.display = "none"
+}, false);
+
+let hoverelseT2 = document.getElementById("T2");
+hoverelseT2.addEventListener("mouseover", function( event ) {
+  document.querySelector('#hT2').style.display = "block"
+}, false);
+hoverelseT2.addEventListener("mouseleave", function( event ) {
+  document.querySelector('#hT2').style.display = "none"
+}, false);
+
 
 
 </script>

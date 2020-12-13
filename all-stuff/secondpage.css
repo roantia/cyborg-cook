@@ -10,12 +10,25 @@ body {
   cursor: url(robot.png), auto;
 }
 
-.flexAbs{
+.flexAbs {
   display: flex;
   justify-content: center;
   align-items: center;
 /*  margin-bottom: 20px;
 */}
+
+.flexBowl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexTabs {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .Wrap1 {
 	border-bottom: 2px black;
@@ -31,6 +44,15 @@ body {
   display: none;
 
 }
+.hide {
+  display: none;
+  font-family: 'Helvetica Neue Regular', sans-serif;
+}
+/*
+.myDIV:hover + .hide {
+  display: flex;
+  color: blue;
+} */
 
 /* top tab buttons */
 .btn {
@@ -38,7 +60,9 @@ body {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  padding: 1px 115px;
+  padding: 1px;
+  outline: none;
+
 /*  cursor: pointer;
 */}
 
@@ -49,13 +73,23 @@ body {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  cursor: pointer;
+  outline: none;
+  /* cursor: pointer; */
+}
+
+.tabs button {
+  color: black;
+}
+
+.tabs button:hover {
+  color: red;
 }
 
 /* current tab indicator !!!!fleur here it is!!!! */
 .tabs button.active {
-  background-color: red;
+  background-color: none;
   border-radius: 10px;
+  color: red;
 }
 
 /* tab content default */
@@ -75,7 +109,7 @@ body {
 
 /* the contents for the flexbox */
 .hallo {
-  height: 10vh;
+  height: 5vw;
   z-index: -1;
   max-height: 100vh;
   max-width: 100vw;
@@ -148,16 +182,22 @@ body {
 /* bowl time */
 .thebowl {
   z-index: -2;
-  max-width: 80vw;
+  max-width: 50vw;
   top: 50vh;
   max-height: 70vh;
 /*  margin-top: 20px;
 */}
 
-.ui-state-highlight{
-  transform: rotate(180deg);
+.infoBox{
+  width: 45vw;
+  max-height: 70vh;
+  /* background-color: orange; */
 
 }
+
+/* .ui-state-highlight{
+  transform: rotate(180deg);
+} */
 
 /* bottom buttons */
 #Back {
