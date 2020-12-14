@@ -87,27 +87,24 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 25px;
+}
+
+.imagebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-img:hover {
-  color: blue;
+.imagebutton .img-top {
+  display: none;
+}
+
+.imagebutton:hover .img-top {
+  display: inline;
 }
 
 
-#logo {
-   background-image: url('logo');
-   height: 70px;
-   width: 120px;
-}
-
-#logo:hover {
-   background-image: url('logo-blu.png');
-}
-
-/* footer {
-height: 30vh;
-} */
 </style>
 </head>
 <body>
@@ -117,8 +114,9 @@ height: 30vh;
       <source src="website2.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="imagebutton">
-    <a href="secondpage.html"><img src="logo.png"/>
+  <div id="logo" class="imagebutton">
+    <a href="secondpage.html"><img src="logo.png"> <a/>
+    <a href="secondpage.html"><img class="img-top" src="logo-blu.png"><a/>
   </div>
 
       <script>
