@@ -10,57 +10,99 @@
 
 </head>
 <body>
+  <div class="flexAbs">
+  <div class="circle-container">
+    <div class="center">
+      <img id="droppable" src="ingredientpics/bowl.png">
+    </div>
+    <div class="dragWrapper deg0">
+      <img id="01" class="draggable" src="ingredientpics/sense1.png">
+    </div>
+    <div class="dragWrapper deg30">
+      <img id="02" class="draggable" src="ingredientpics/organism2.png">
+    </div>
+    <div class="dragWrapper deg60">
+      <img id="03" class="draggable" src="ingredientpics/soil.png">
+    </div>
+    <div class="dragWrapper deg90">
+      <img id="04" class="draggable" src="ingredientpics/fire.png">
+    </div>
+    <div class="dragWrapper deg120">
+      <img id="05" class="draggable" src="ingredientpics/sense2.png">
+    </div>
+    <div class="dragWrapper deg150">
+      <img id="06" class="draggable" src="ingredientpics/sense6.png">
+    </div>
+    <div class="dragWrapper deg180">
+      <img id="07" class="draggable" src="ingredientpics/tool4.png">
+    </div>
+    <div class="dragWrapper deg210">
+      <img id="08" class="draggable" src="ingredientpics/organism6.png">
+    </div>
+    <div class="dragWrapper deg240">
+      <img id="09" class="draggable" src="ingredientpics/organism1.png">
+    </div>
+    <div class="dragWrapper deg270">
+      <img id="10" class="draggable" src="ingredientpics/tool2.png">
+    </div>
+    <div class="dragWrapper deg300">
+      <img id="11" class="draggable" src="ingredientpics/tool9.png">
+    </div>
+    <div class="dragWrapper deg330">
+      <img id="12" class="draggable" src="ingredientpics/organism8.png">
+    </div>
 
-  
+  </div>
+</div>
   <script>
 
-    // this is the js for the about not-a-popup
-    function openSub(evt, sub) {
-      let i, subcontent, sublink;
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(sub).style.display = "block";
-    }
+  // this is the js for the about not-a-popup
+  function openSub(evt, sub) {
+    let i, subcontent, sublink;
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(sub).style.display = "block";
+  }
 
-    let addedIngredients = [];
-    $(document).ready(function(){
-      $( ".dragWrapper" ).draggable();
-      $( "#droppable" ).droppable({
-        drop: function( event, ui ) {
-          $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-          .html( "Dropped!" );
-          // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
-          console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
-          // ADD THE ID TO THE ARRAY
-          addedIngredients.push(ui.draggable.context.querySelector("img").getAttribute("id"));
-          // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
-          // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
-          if(addedIngredients.length >= 3) {
-            const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
-            $("#cookButton").addClass("showButton");
-            $("#cookButton a").attr("href", arrayLink);
-          }
-
+  let addedIngredients = [];
+  $(document).ready(function(){
+    $( ".dragWrapper" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+        .addClass( "ui-state-highlight" )
+        .find( "p" )
+        .html( "Dropped!" );
+        // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
+        console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
+        // ADD THE ID TO THE ARRAY
+        addedIngredients.push(ui.draggable.context.querySelector("img").getAttribute("id"));
+        // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
+        // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
+        if(addedIngredients.length >= 3) {
+          const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
+          $("#cookButton").addClass("showButton");
+          $("#cookButton a").attr("href", arrayLink);
         }
-      });
+
+      }
     });
+  });
 
-    let hoverelseT1 = document.getElementById("T1");
-    hoverelseT1.addEventListener("mouseover", function( event ) {
-      document.querySelector('#hT1').style.display = "block"
-    }, false);
-    hoverelseT1.addEventListener("mouseleave", function( event ) {
-      document.querySelector('#hT1').style.display = "none"
-    }, false);
+  let hoverelseT1 = document.getElementById("T1");
+  hoverelseT1.addEventListener("mouseover", function( event ) {
+    document.querySelector('#hT1').style.display = "block"
+  }, false);
+  hoverelseT1.addEventListener("mouseleave", function( event ) {
+    document.querySelector('#hT1').style.display = "none"
+  }, false);
 
-    let hoverelseT2 = document.getElementById("T2");
-    hoverelseT2.addEventListener("mouseover", function( event ) {
-      document.querySelector('#hT2').style.display = "block"
-    }, false);
-    hoverelseT2.addEventListener("mouseleave", function( event ) {
-      document.querySelector('#hT2').style.display = "none"
-    }, false);
+  let hoverelseT2 = document.getElementById("T2");
+  hoverelseT2.addEventListener("mouseover", function( event ) {
+    document.querySelector('#hT2').style.display = "block"
+  }, false);
+  hoverelseT2.addEventListener("mouseleave", function( event ) {
+    document.querySelector('#hT2').style.display = "none"
+  }, false);
 
 
 

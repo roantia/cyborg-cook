@@ -20,4 +20,121 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+.draggable {
+  height: 5vw;
+  z-index: -1;
+  /* max-height: 100vh;
+  max-width: 100vw; */
+  /* object-fit: contain; */
+  /* padding: 1vw; */
+}
+
+.circle-container {
+
+  border-radius: 50%;
+}
+
+/* .circle-container  {
+  display: block;
+  width: 4em; height: 4em;
+  margin: -2em;
+} */
+/* .circle-container img {
+  display: block; width: 100%;
+} */
+
+@media (min-aspect-ratio: 1/1) {
+  .circle-container {
+    width: 60vh;
+    height: 60vh;
+  }
+  .center {
+    max-width: auto;
+    max-height: 50vh;
+  }
+  .deg0 {
+    transform: translate(30vh);
+  } /* 30vh = half the width of the wrapper */
+  .deg30 {
+    transform: rotate(30deg) translate(30vh) rotate(-30deg);
+  }
+  .deg60 {
+    transform: rotate(60deg) translate(30vh) rotate(-60deg);
+  }
+  .deg90 {
+    transform: rotate(90deg) translate(30vh) rotate(-90deg);
+  }
+  .deg120 {
+    transform: rotate(120deg) translate(30vh) rotate(-120deg);
+  }
+  .deg150 {
+    transform: rotate(150deg) translate(30vh) rotate(-150deg);
+  }
+  .deg180 {
+    transform: translate(-30vh);
+  }
+  .deg210 {
+    transform: rotate(210deg) translate(30vh) rotate(-210deg);
+  }
+  .deg240 {
+    transform: rotate(240deg) translate(30vh) rotate(-240deg);
+  }
+  .deg270 {
+    transform: rotate(270deg) translate(30vh) rotate(-270deg);
+  }
+  .deg300 {
+    transform: rotate(300deg) translate(30vh) rotate(-300deg);
+  }
+  .deg330 {
+    transform: rotate(330deg) translate(30vh) rotate(-330deg);
+  }
+}
+@media (max-aspect-ratio: 1/1) {
+  .circle-container {
+    width: 60vw;
+    height: 60vw;
+  }
+  .center {
+    max-width: 50vw;
+    max-height: auto;
+  }
+  .deg0 {
+    transform: translate(30vw);
+  } /* 30vw = half the width of the wrapper */
+  .deg30 {
+    transform: rotate(30deg) translate(30vw) rotate(-30deg);
+  }
+  .deg60 {
+    transform: rotate(60deg) translate(30vw) rotate(-60deg);
+  }
+  .deg90 {
+    transform: rotate(90deg) translate(30vw) rotate(-90deg);
+  }
+  .deg120 {
+    transform: rotate(120deg) translate(30vw) rotate(-120deg);
+  }
+  .deg150 {
+    transform: rotate(150deg) translate(30vw) rotate(-150deg);
+  }
+  .deg180 {
+    transform: translate(-30vw);
+  }
+  .deg210 {
+    transform: rotate(210deg) translate(30vw) rotate(-210deg);
+  }
+  .deg240 {
+    transform: rotate(240deg) translate(30vw) rotate(-240deg);
+  }
+  .deg270 {
+    transform: rotate(270deg) translate(30vw) rotate(-270deg);
+  }
+  .deg300 {
+    transform: rotate(300deg) translate(30vw) rotate(-300deg);
+  }
+  .deg330 {
+    transform: rotate(330deg) translate(30vw) rotate(-330deg);
+  }
 }
