@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cooking With Soul</title>
+  <link rel="stylesheet" type="text/css" href="cook.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+  
+  <script>
+
+    // this is the js for the about not-a-popup
+    function openSub(evt, sub) {
+      let i, subcontent, sublink;
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(sub).style.display = "block";
+    }
+
+    let addedIngredients = [];
+    $(document).ready(function(){
+      $( ".dragWrapper" ).draggable();
+      $( "#droppable" ).droppable({
+        drop: function( event, ui ) {
+          $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+          .html( "Dropped!" );
+          // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
+          console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
+          // ADD THE ID TO THE ARRAY
+          addedIngredients.push(ui.draggable.context.querySelector("img").getAttribute("id"));
+          // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
+          // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
+          if(addedIngredients.length >= 3) {
+            const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
+            $("#cookButton").addClass("showButton");
+            $("#cookButton a").attr("href", arrayLink);
+          }
+
+        }
+      });
+    });
+
+    let hoverelseT1 = document.getElementById("T1");
+    hoverelseT1.addEventListener("mouseover", function( event ) {
+      document.querySelector('#hT1').style.display = "block"
+    }, false);
+    hoverelseT1.addEventListener("mouseleave", function( event ) {
+      document.querySelector('#hT1').style.display = "none"
+    }, false);
+
+    let hoverelseT2 = document.getElementById("T2");
+    hoverelseT2.addEventListener("mouseover", function( event ) {
+      document.querySelector('#hT2').style.display = "block"
+    }, false);
+    hoverelseT2.addEventListener("mouseleave", function( event ) {
+      document.querySelector('#hT2').style.display = "none"
+    }, false);
+
+
+
+  </script>
+</body>
+</html>
