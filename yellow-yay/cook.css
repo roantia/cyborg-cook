@@ -57,6 +57,8 @@ p {
 }
 #plateInstructions {
   z-index: 2;
+  position: fixed;
+  top: 45vh;
 }
 
 /* for when it is wider than tall */
@@ -138,51 +140,51 @@ p {
   } */
   .deg0 {
     left: 50vw;
-    top: 10vw;
+    top: calc(10vw + 50vh - 2.5vh - 50vw);
   }
   .deg30 {
     left: 70vw;
-    top: 13.36vw;
+    top: calc(13.36vw + 50vh - 2.5vh - 50vw);
   }
   .deg60 {
     left: 86.64vw;
-    top: 30vw;
+    top: calc(30vw + 50vh - 2.5vh - 50vw);
   }
   .deg90 {
     left: 90vw;
-    top: 50vw;
+    top: calc(50vw + 50vh - 2.5vh - 50vw);
   }
   .deg120 {
     left: 86.64vw;
-    top: 70vw;
+    top: calc(70vw + 50vh - 2.5vh - 50vw);
   }
   .deg150 {
     left: 70vw;
-    top: 86.64vw;
+    top: calc(86.64vw + 50vh - 2.5vh - 50vw);
   }
   .deg180 {
     left: 50vw;
-    top: 90vw;
+    top: calc(90vw + 50vh - 2.5vh - 50vw);
   }
   .deg210 {
     left: 30vw;
-    top: 86.64vw
+    top: calc(86.64vw + 50vh - 2.5vh - 50vw);
   }
   .deg240 {
     left: 13.36vw;
-    top: 70vw;
+    top: calc(70vw + 50vh - 2.5vh - 50vw);
   }
   .deg270 {
     left: 10vw;
-    top: 50vw;
+    top: calc(50vw + 50vh - 2.5vh - 50vw);
   }
   .deg300 {
     left: 13.36vw;
-    top: 30vw;
+    top: calc(30vw + 50vh - 2.5vh - 50vw);
   }
   .deg330 {
     left: 30vw;
-    top: 13.36vw;
+    top: calc(13.36vw + 50vh - 2.5vh - 50vw);
   }
 }
 
@@ -197,8 +199,11 @@ p {
 }
 
 .bottomButtons {
-  height: 95vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+}
+
+#cook {
+  position: fixed;
+  right: 0;
 }

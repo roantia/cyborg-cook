@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="cook.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 </head>
 <body>
   <div class="topButtons">
@@ -63,9 +62,11 @@
         THE PLATE IN ORDER TO <br>
         <a href="#">COOK.</a></p>
       </div>
+
+
       <div class="bottomButtons">
         <a href="#">About</a>
-        <a class="cookButton" href="">Cook</a>
+        <a class="cookButton" id="cook" href="">Cook</a>
       </div>
 
     </div>
@@ -99,12 +100,12 @@
 
 
 
-  // this is the js for the about not-a-popup
-  function openSub(evt, sub) {
-    let i, subcontent, sublink;
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(sub).style.display = "block";
-  }
+  // // this is the js for the about not-a-popup
+  // function openSub(evt, sub) {
+  //   let i, subcontent, sublink;
+  //   // Show the current tab, and add an "active" class to the button that opened the tab
+  //   document.getElementById(sub).style.display = "block";
+  // }
 
   let addedIngredients = [];
   $(document).ready(function(){
