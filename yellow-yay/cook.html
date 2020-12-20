@@ -10,12 +10,14 @@
 
 </head>
 <body>
+  <div class="topButtons">
+    <a href="#">A Cyborg Manifesto</a>
+    <a href="vimeo link here">Cooking With Soul</a>
+  </div>
 
-  <div class="flexAbs">
+  <div class="flexAbs center">
     <!-- <div class="circle-container"> -->
-    <div class="center">
-      <img id="droppable" src="ingredientpics/bowl.png" alt="bowl">
-    </div>
+    <img id="droppable" src="ingredientpics/bowl.png" alt="bowl">
   </div>
   <div class="circle-container">
     <div class="dragWrapper deg0">
@@ -55,15 +57,45 @@
       <img id="07" class="draggable" src="ingredientpics/tool4.png" alt="a tool">
     </div>
 
-
-
-
-
+    <div class="platestuff">
+      <p id="plateInstructions">DRAG AND DROP AT LEAST <br>
+        THREE INGREDIENTS ONTO <br>
+        THE PLATE IN ORDER TO <br>
+        <a href="#">COOK.</a></p>
+      </div>
+      <div class="bottomButtons">
+        <a href="#">About</a>
+        <a class="cookButton" href="">Cook</a>
+      </div>
 
     </div>
   </div>
   <script>
-
+  // function drawCircle(selector, center, radius, angle, x, y)
+  // {
+  //   var total = $(selector).length;
+  //   var alpha = Math.PI * 2 / total;
+  //
+  //   $(selector).each(function(index)
+  //   {
+  //     var theta = alpha * index;
+  //     var pointx = Math.floor(Math.cos( theta ) * radius);
+  //     var pointy = Math.floor(Math.sin( theta ) * radius );
+  //
+  //     $(this).css('margin-left', pointx + x + 'px');
+  //     $(this).css('margin-top', pointy + y + 'px');
+  //   });
+  //
+  // }
+  //
+  //
+  // $(document).ready(function()
+  // {
+  //
+  //
+  //   drawCircle('.box', 0, 250, 0, 500, 500);
+  //
+  // });
 
 
 
@@ -117,6 +149,6 @@
 
 
 
-  </script>
+</script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   cursor: url(hand.png), auto;
 
 }
@@ -9,6 +8,8 @@ body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
+  /* overflow: hidden; */
+
 }
 
 body {
@@ -21,7 +22,18 @@ body {
   justify-content: center;
   align-items: center;
   /* height: 100vh; */
+  z-index: 1;
 }
+
+.platestuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+p {
+   text-align: center;
+ }
 
 .draggable {
   height: 5vw;
@@ -36,79 +48,94 @@ body {
 .dragWrapper {
   width: 5vw;
 }
+
 .circle-container {
   display: float;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+}
+#plateInstructions {
+  z-index: 2;
 }
 
+/* for when it is wider than tall */
 @media (min-aspect-ratio: 1/1) {
-  .circle-container {
+  /* .circle-container {
     width: 90vh;
     height: 90vh;
-  }
-  .center {
+  } */
+  /* .center {
     max-width: 20vh;
     max-height: 20vh;
+  } */
+  #droppable {
+    position: fixed;
+    width: 60vh;
+    top: 15vh;
+    left: calc(50vw - 30vh);
   }
   .deg0 {
-    left: 50vh;
-    top: 10vh;
+    left: calc(50vh + 50vw - 2.5vw - 50vh);
+    top: 5vh;
   }
   .deg30 {
-    left: 70vh;
-    top: 13.36vh;
+    left: calc(70vh + 50vw - 2.5vw - 50vh);
+    top: 8.36vh;
   }
   .deg60 {
-    left: 86.64vh;
-    top: 30vh;
+    left: calc(86.64vh + 50vw - 2.5vw - 50vh);
+    top: 25vh;
   }
   .deg90 {
-    left: 90vh;
-    top: 50vh;
+    left: calc(90vh + 50vw - 2.5vw - 50vh);
+    top: 45vh;
   }
   .deg120 {
-    left: 86.64vh;
-    top: 70vh;
+    left: calc(86.64vh + 50vw - 2.5vw - 50vh);
+    top: 65vh;
   }
   .deg150 {
-    left: 70vh;
-    top: 86.64vh;
+    left: calc(70vh + 50vw - 2.5vw - 50vh);
+    top: 81.64vh;
   }
   .deg180 {
-    left: 50vh;
-    top: 90vh;
+    left: calc(50vh + 50vw - 2.5vw - 50vh);
+    top: 85vh;
   }
   .deg210 {
-    left: 30vh;
-    top: 86.64vh
+    left: calc(30vh + 50vw - 2.5vw - 50vh);
+    top: 81.64vh
   }
   .deg240 {
-    left: 13.36vh;
-    top: 70vh;
+    left: calc(13.36vh + 50vw - 2.5vw - 50vh);
+    top: 65vh;
   }
   .deg270 {
-    left: 10vh;
-    top: 50vh;
+    left: calc(10vh + 50vw - 2.5vw - 50vh);
+    top: 45vh;
   }
   .deg300 {
-    left: 13.36vh;
-    top: 30vh;
+    left: calc(13.36vh + 50vw - 2.5vw - 50vh);
+    top: 25vh;
   }
   .deg330 {
-    left: 30vh;
-    top: 13.36vh;
+    left: calc(30vh + 50vw - 2.5vw - 50vh);
+    top: 8.36vh;
   }
 }
+/* for when it is taller than wide */
 @media (max-aspect-ratio: 1/1) {
-  .circle-container {
-    width: 50vw;
-    height: 50vw;
+  #droppable {
+    position: fixed;
+    width: 60vw;
+    top: calc(50vh - 30vw);
+    left: 20vw;
   }
-  .center {
+  /* .center {
     max-width: 50vw;
     max-height: 50vw;
-  }
+  } */
   .deg0 {
     left: 50vw;
     top: 10vw;
@@ -157,4 +184,21 @@ body {
     left: 30vw;
     top: 13.36vw;
   }
+}
+
+
+
+/* corner stuff follows */
+
+.topButtons {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.bottomButtons {
+  height: 95vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
