@@ -75,9 +75,17 @@
         <a href="#">COOK.</a></p>
       </div>
 
+      <div class="abtcontent subwindow" id="Aboutsub">
+        <div class="abtText">
+          <h1>Who we are</h1>
+          <p>this is a project about cyborgs</p>
+        </div>
+        <button class="btn2" onclick="this.parentElement.style.display='none'">Close About</button>
+      </div>
+
 
       <div class="bottomButtons">
-        <a href="#">About</a>
+        <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">About</button>
         <a class="cookButton" id="cook" href="">Cook</a>
       </div>
 
@@ -85,12 +93,12 @@
   </div>
   <script>
 
-  // // this is the js for the about not-a-popup
-  // function openSub(evt, sub) {
-  //   let i, subcontent, sublink;
-  //   // Show the current tab, and add an "active" class to the button that opened the tab
-  //   document.getElementById(sub).style.display = "block";
-  // }
+  // this is the js for the about not-a-popup
+  function openSub(evt, sub) {
+    let i, subcontent, sublink;
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(sub).style.display = "block";
+  }
 
   let addedIngredients = [];
   $(document).ready(function(){
