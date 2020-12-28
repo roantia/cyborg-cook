@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   cursor: url(hand.png), auto;
+  font-family: "Suisse Int'l Medium", Helvetica, sans-serif;
 
 }
 body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 body {
@@ -33,7 +34,20 @@ body {
 p {
    text-align: center;
  }
+ /* unvisited link */
+ a:link {
+   text-decoration: none;
+ }
 
+ /* visited link */
+ a:visited {
+   color: black;
+ }
+
+
+ a:hover {
+   color: red;
+ }
 .draggable {
   height: 5vw;
   width: auto;
@@ -58,9 +72,11 @@ p {
   z-index: 2;
   position: fixed;
   top: 45vh;
-  /* align-items: center; */
 }
 
+#plateInstructions a#showButton{
+  color: pink;
+}
 
 /* for when it is wider than tall */
 @media (min-aspect-ratio: 1/1) {

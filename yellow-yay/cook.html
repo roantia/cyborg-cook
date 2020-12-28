@@ -72,7 +72,7 @@
       <p id="plateInstructions">DRAG AND DROP AT LEAST <br>
         THREE INGREDIENTS ONTO <br>
         THE PLATE IN ORDER TO <br>
-       <a href="#" class="yourlink">COOK.</a></p>
+       <a href="#" class="idlink">COOK.</a></p>
       </div>
 
       <!-- <div class="abtcontent subwindow" id="Aboutsub">
@@ -120,9 +120,9 @@
           const firstLink = addedIngredients[0]
           const secondLink = addedIngredients[1]
           const thirdLink = addedIngredients[2]
-          // $("#cookButton").addClass("showButton");
+          $("#plateInstructions").addId("showButton");
           // $("#plateInstructions a").attr("href", arrayLink);
-          $("a.yourlink").click(function(e) {
+          $("a.idlink").click(function(e) {
             e.preventDefault();
             window.open(firstLink);
             window.open(secondLink);
