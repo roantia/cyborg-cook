@@ -1,4 +1,4 @@
-0\0<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 <body>
   <div class="topButtons">
     <a href="#">A Cyborg Manifesto</a>
-    <a href="vimeo link here">Cooking With Soul</a>
+    <a href="https://youtu.be/hBMlGmwJMuw">Cooking With Soul</a>
   </div>
 
   <div class="flexAbs center">
@@ -20,15 +20,15 @@
   </div>
   <div class="circle-container">
     <div class="dragWrapper tooltip deg0">
-      <img id="01" class="draggable" src="ingredientpics/sense1.png" alt="a sense">
+      <img id="https://webplatform.github.io/docs/guides/html_links/" class="draggable" src="ingredientpics/sense1.png" alt="a sense">
       <span class="tooltiptext">PUT STUFF HERE</span>
     </div>
     <div class="dragWrapper tooltip deg330">
-      <img id="12" class="draggable" src="ingredientpics/organism8.png" alt="an organism">
+      <img id="https://facebook.com" class="draggable" src="ingredientpics/organism8.png" alt="an organism">
       <span class="tooltiptext">PUT STUFF HERE 12</span>
     </div>
     <div class="dragWrapper tooltip deg30">
-      <img id="02" class="draggable" src="ingredientpics/organism2.png" alt="an organism">
+      <img id="https://www.google.com/" class="draggable" src="ingredientpics/organism2.png" alt="an organism">
       <span class="tooltiptext">2</span>
     </div>
     <div class="dragWrapper tooltip deg300">
@@ -36,7 +36,7 @@
       <span class="tooltiptext">11</span>
     </div>
     <div class="dragWrapper tooltip deg60">
-      <img id="03" class="draggable" src="ingredientpics/soil.png" alt="soil">
+      <img id="https://duckduckgo.com/" class="draggable" src="ingredientpics/soil.png" alt="soil">
       <span class="tooltiptext">3</span>
     </div>
     <div class="dragWrapper tooltip deg270">
@@ -72,7 +72,7 @@
       <p id="plateInstructions">DRAG AND DROP AT LEAST <br>
         THREE INGREDIENTS ONTO <br>
         THE PLATE IN ORDER TO <br>
-        <a href="#">COOK.</a></p>
+       <a href="#" class="yourlink">COOK.</a></p>
       </div>
 
       <!-- <div class="abtcontent subwindow" id="Aboutsub">
@@ -107,8 +107,8 @@
       drop: function( event, ui ) {
         $( this )
         .addClass( "ui-state-highlight" )
-        .find( "p" )
-        .html( "Dropped!" );
+        // .find( "p" )
+        // .html( "Dropped!" );
         // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
         console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
         // ADD THE ID TO THE ARRAY
@@ -117,8 +117,17 @@
         // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
         if(addedIngredients.length >= 3) {
           const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
-          $("#cookButton").addClass("showButton");
-          $("#cookButton a").attr("href", arrayLink);
+          const firstLink = addedIngredients[0]
+          const secondLink = addedIngredients[1]
+          const thirdLink = addedIngredients[2]
+          // $("#cookButton").addClass("showButton");
+          // $("#plateInstructions a").attr("href", arrayLink);
+          $("a.yourlink").click(function(e) {
+            e.preventDefault();
+            window.open(firstLink);
+            window.open(secondLink);
+            window.open(thirdLink);
+          });
         }
 
       }
