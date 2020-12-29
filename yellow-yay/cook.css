@@ -9,7 +9,7 @@ body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 body {
@@ -270,7 +270,23 @@ a:hover {
   display: none;
 }
 /* how the about thing looks */
-.subwindow {
+.subwindowA {
+  z-index: 10;
+  opacity:1;
+  background-color: #ffff00;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+}
+
+/* link toggle thingy */
+.linkcontent {
+  display: none;
+}
+/* how the link thing looks */
+.subwindowL {
   z-index: 10;
   opacity:1;
   background-color: #ffff00;

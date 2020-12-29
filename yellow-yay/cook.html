@@ -67,7 +67,7 @@ This specific clip can hold together different types of lifeforms.</span>
     </div>
     <div class="dragWrapper tooltip deg180">
       <img id="http://www.forharriet.com/2014/08/7-black-women-science-fiction-writers.html" class="draggable" src="ingredientpics/tool4.png" alt="a tool">
-      <span class="tooltiptext">DRILLING MACHINE <br> Drilling is a cutting process that uses a drill bit to cut a hole in the patriarchal concept of gender. </span>
+      <span class="tooltiptext">DRILL <br> Drilling is a cutting process that uses a drill bit to cut a hole in the patriarchal concept of gender. </span>
     </div>
 
     <div class="platestuff">
@@ -77,22 +77,31 @@ This specific clip can hold together different types of lifeforms.</span>
         <a href="#" class="idlink">COOK</a></p>
       </div>
 
-      <div class="abtcontent subwindow" id="Aboutsub">
+      <div class="abtcontent subwindowA" id="Aboutsub">
         <div class="abtText">
           <i>Cooking With Soul</i> is a project which was created in respond to the Donna Haraway's "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late Twentieth Century". Our journey resulted in a <a href="https://youtu.be/hBMlGmwJMuw" class="yourlink1" style="text-decoration: none"><u>livestream</u></a> event on twitch.tv where we explored the physical act of cooking guided by a performative <br> reading based on Donna Haraway's words. This website serves as digital extension of our cooking show. We show you different qualities each element contains and the possibilities when it comes to merging them. When the cooking is done, an informative surprises await. We hope you enjoy our and your own cooking session because a lot of undiscovered connections and hyperlinks lie just beyond our imaginations. <br> <br>
-          
+
        </div>
        <div class="abtText2">Website design:<br> Paulina Trzeciak <br> Ro Antia <br> Fleurine Brijker <br> <br> December 2020, the Netherlands <br>
 		  <a href="https://www.kabk.nl/en/" class="yourlink4" style="text-decoration: none"><u>Royal Academy of Art (KABK)</u></a><br>
 		  Interactive Media Design and Coding class with <a href="http://www.sulsolsal.com" class="yourlink2" style="text-decoration: none"><u>Hannes Bernard</u></a> and <a href="http://www.aptoptout.studio" class="yourlink3" style="text-decoration: none"><u>Martijn de Heer</u></a><br><br> Made for educational purpose. <br>
-Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div> 
+Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
         <button class="btn2 abtText" onclick="this.parentElement.style.display='none'"><br>←</button>
       </div>
 
 
+
+      <div class="linkcontent subwindowL" id="Linksub">
+        <div class="linkText">
+          <i>LINK</i>
+       </div>
+        <button class="btn2 linkText" onclick="this.parentElement.style.display='none'"><br>←</button>
+      </div>
+
+
       <div class="bottomButtons">
-        <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">More info</button>
-         <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">Links</button>
+        <button onclick="openSubA(event, 'Aboutsub')" class="btn2 subabt" id="About">More info</button>
+         <button onclick="openSubL(event, 'Linksub')" class="btn2 sublink" id="Links">Links</button>
       </div>
 
     </div>
@@ -100,10 +109,16 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
   <script>
 
   // this is the js for the about not-a-popup
-  function openSub(evt, sub) {
-    let i, subcontent, sublink;
+  function openSubA(evt, subA) {
+    let i, subcontentA, subabt;
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(sub).style.display = "block";
+    document.getElementById(subA).style.display = "block";
+  }
+
+  function openSubL(evt, subL) {
+    let i, subcontentL, sublink;
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(subL).style.display = "block";
   }
 
   let addedIngredients = [];
