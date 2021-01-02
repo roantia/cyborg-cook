@@ -89,12 +89,14 @@ a:hover {
       </video>
     </div>
   <div id="centertext" class="text">
-    <p>Donna Haraway once said 
+    <p>
+      <a href="http://cyborganthropology.com/Donna_Haraway" class="yourlink20" style="text-decoration: none">Donna Haraway</a> once said 
       that we <br> are all fabricated hybrids 
       of machine <br> and organism; in short, we are all cyborgs. <br>
       We depend on technological inventions <br>
       and we merge with non human elements. <br>
-      In this project you can create your own cyborg, <br>
+      In this project you can create your own 
+      <a href="http://cyborganthropology.com/What_is_a_Cyborg%3F" class="yourlink21" style="text-decoration: none">cyborg</a>, <br>
       or as we call it a "soul". 
       What elements <br>will your soul include? 
       What will your soul <br> teach you about the world we live in? <br>
@@ -103,7 +105,14 @@ a:hover {
   </div>
 
 <script>
-
+$('a.yourlink20').click(function(e) {
+    e.preventDefault();
+    window.open('http://cyborganthropology.com/Donna_Haraway');
+});
+$('a.yourlink21').click(function(e) {
+    e.preventDefault();
+    window.open('http://cyborganthropology.com/What_is_a_Cyborg%3F');
+});
 </script>
 
 </body>
