@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel="icon" href="emoji.png" type="image" sizes="16x16">
+  <meta charset="utf-8">
+  <title>Cooking With Soul</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: url(hand.png), auto;
+  font-family: "Suisse Int'l Medium", Helvetica, sans-serif;
+
+}
+body {
+  background-color: #ffff00;
+}
+@media (min-aspect-ratio: 16/9) {
+  #myVideo {
+    width:100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #myVideo {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.videoContainer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+video {
+  position: absolute;
+  z-index: 1;
+}
+
+.text {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+a {
+  color: #000000;
+}
+
+h3, p, a{
+  z-index: 10;
+  text-align: center;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+
+a:hover {
+  color: blue;
+}
+
+</style>
+</head>
+<body>
+  <div class="videoContainer">
+    <video autoplay muted loop id="myVideo">
+      <source src="final.mp4" type="video/mp4">
+      </video>
+    </div>
+  <div id="centertext" class="text">
+    <p>Donna Haraway once said 
+      that we <br> are all fabricated hybrids 
+      of machine <br> and organism; in short, we are all cyborgs. <br>
+      We depend on technological inventions <br>
+      and we merge with non human elements. <br>
+      In this project you can create your own cyborg, <br>
+      or as we call it a "soul". 
+      What elements <br>will your soul include? 
+      What will your soul <br> teach you about the world we live in? <br>
+      </p>
+      <a href="cook.html"><br>COOK AND DISCOVER<br>→</a>
+  </div>
+
+<script>
+
+</script>
+
+</body>
+</html>

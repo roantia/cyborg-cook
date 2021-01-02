@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url(hand.png), auto;
+  font-family: "Suisse Int'l Medium", Helvetica, sans-serif;
+
+}
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: #ffff00;
+  /* cursor: url(hand.png), auto; */
+}
+
+.flexAbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  z-index: 1;
+}
+
+.platestuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+p {
+   text-align: center;
+ }
+
+.draggable {
+  height: 6vw;
+  width: auto;
+  position: absolute;
+  /* z-index: -1; */
+  /* max-height: 100vh;
+  max-width: 100vw; */
+  /* object-fit: contain; */
+  /* padding: 1vw; */
+}
+.dragWrapper {
+  width: 5vw;
+}
+
+.circle-container {
+  display: float;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+#plateInstructions {
+  z-index: 2;
+  position: fixed;
+  top: 45vh;
+}
+
+/* for when it is wider than tall */
+@media (min-aspect-ratio: 1/1) {
+  /* .circle-container {
+    width: 90vh;
+    height: 90vh;
+  } */
+  /* .center {
+    max-width: 20vh;
+    max-height: 20vh;
+  } */
+  #droppable {
+    position: fixed;
+    width: 60vh;
+    top: 16vh;
+    left: calc(50vw - 30vh);
+  }
+
+  .shadow {
+    -webkit-filter: drop-shadow(2px 9px 25px rgba(0,0,0,0.5));
+}
+  .deg0 {
+    left: calc(50vh + 50vw - 2.5vw - 50vh);
+    top: -3vh;
+  }
+  .deg30 {
+    left: calc(70vh + 50vw - 0vw - 50vh);
+    top: 4.00vh;
+  }
+  .deg60 {
+    left: calc(86.64vh + 50vw - 2.5vw - 50vh);
+    top: 20vh;
+  }
+  .deg90 {
+    left: calc(90vh + 50vw - 3.5vw - 50vh);
+    top: 37vh;
+  }
+  .deg120 {
+    left: calc(86.64vh + 50vw - 3.5vw - 50vh);
+    top: 55vh;
+  }
+  .deg150 {
+    left: calc(70vh + 50vw - 2vw - 50vh);
+    top: 70vh;
+  }
+  .deg180 {
+    left: calc(50vh + 50vw - 3.5vw - 50vh);
+    top: 74vh;
+  }
+  .deg210 {
+    left: calc(30vh + 50vw - 6vw - 50vh);
+    top: 70.00vh
+  }
+  .deg240 {
+    left: calc(13.36vh + 50vw - 3.5vw - 50vh);
+    top: 55vh;
+  }
+  .deg270 {
+    left: calc(10vh + 50vw - 3vw - 50vh);
+    top: 37vh;
+  }
+  .deg300 {
+    left: calc(13.36vh + 50vw - 2vw - 50vh);
+    top: 19vh;
+  }
+  .deg330 {
+    left: calc(30vh + 50vw - 3.5vw - 50vh);
+    top: 3.00vh;
+  }
+}
+/* for when it is taller than wide */
+@media (max-aspect-ratio: 1/1) {
+  #droppable {
+    position: fixed;
+    width: 60vw;
+    top: calc(50vh - 30vw);
+    left: 20vw;
+  }
+  /* .center {
+    max-width: 50vw;
+    max-height: 50vw;
+  } */
+  .deg0 {
+    left: 50vw;
+    top: calc(10vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg30 {
+    left: 70vw;
+    top: calc(13.36vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg60 {
+    left: 86.64vw;
+    top: calc(30vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg90 {
+    left: 90vw;
+    top: calc(50vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg120 {
+    left: 86.64vw;
+    top: calc(70vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg150 {
+    left: 70vw;
+    top: calc(86.64vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg180 {
+    left: 50vw;
+    top: calc(90vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg210 {
+    left: 30vw;
+    top: calc(86.64vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg240 {
+    left: 13.36vw;
+    top: calc(70vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg270 {
+    left: 10vw;
+    top: calc(50vw + 50vh - 2.5vh - 50vw);
+  }f
+  .deg300 {
+    left: 13.36vw;
+    top: calc(30vw + 50vh - 2.5vh - 50vw);
+  }
+  .deg330 {
+    left: 30vw;
+    top: calc(13.36vw + 50vh - 2.5vh - 50vw);
+  }
+}
+/* tooltipfun */
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px 5px;
+  border-radius: 6px;
+  font-size: 12px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 250px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* tooltips in Link Section (Images)*/
+
+.tooltip2 {
+  position:relative;
+}
+ 
+.tooltip2 span {
+  display:none;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  color:black;
+}
+ 
+.tooltip2 span img {
+  float:left;
+   height: auto; 
+   width: auto; 
+   max-width: 19vw; 
+  /*position: absolute;*/
+}
+ 
+.tooltip2:hover span {
+  display:block;
+  position:absolute;
+  top:0;
+  left:19vw;
+  z-index:1000;
+  width:auto;
+  max-width:320px;
+  min-height:128px;
+  margin-top:3vh;
+  margin-left:20vw;
+  /*overflow:hidden;*/
+  padding:8px;
+}
+
+
+
+/* corner stuff follows */
+
+.topButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw;
+  color: black;
+
+}
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+
+a:hover {
+  color: blue;
+}
+
+.bottomButtons {
+  display: flex;
+  margin-top: 80vh;
+  padding: 2vw;
+  bottom: 0;
+  justify-content: space-between;
+}
+
+#cook {
+  position: fixed;
+  right: 0;
+  padding: 2vw;
+  color: black;
+
+}
+
+.btn2 {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  outline:none;
+}
+
+.btn2:hover {
+  background-color: transparent;
+  border: none;
+  color: blue;
+}
+/* about toggle thingy */
+.abtcontent {
+  display: none;
+}
+/* how the about thing looks */
+.subwindowA {
+  z-index: 10;
+  opacity:1;
+  background-color: #ffff00;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+}
+
+/* link toggle thingy */
+.linkcontent {
+  display: none;
+}
+/* how the link thing looks */
+.subwindowL {
+  z-index: 10;
+  opacity:1;
+  background-color: #ffff00;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+}
+h1 {
+  text-align: center;
+
+}
+.abtText {
+	padding: 2vw;
+	text-align: left;
+	margin-right: 49vw;
+}
+
+.abtText2 {
+	padding: 2vw;
+	text-align: left;
+	margin-right: 49vw;
+	font-size: 14px;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cooking With Soul</title>
+  <link rel="stylesheet" type="text/css" href="secondpage.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+  <div class="borderBottom">
+    <div class="flexAbs">
+      <img onclick="openSub(event, 'Aboutsub')" class="top" id="logo" src="logo.png"/>
+    </div>
+  </div>
+
+  <!-- TOGGLEYTABS -->
+  <div class="flexAbs">
+    <div class="upper tabs flexTabs">
+      <button class="btn tablinks" id="Tooltab" onclick="openTab(event, 'Tool')">Tool</button>
+      <button class="btn tablinks" id="Elementtab" onclick="openTab(event, 'Element')">Element</button>
+      <button class="btn tablinks" id="Sensetab" onclick="openTab(event, 'Sense')">Sense</button>
+      <button class="btn tablinks" id="Organismtab" onclick="openTab(event, 'Organism')">Organism</button>
+    </div>
+</div>
+  <!-- toggleytab that starts open, and which closes once a tab opens -->
+  <div>
+
+  </div>
+
+  <!-- WHAT GOES IN THE TOGGLEYTABS -->
+  <div class="flexAbs">
+    <div class="tools flex tabcontent" id="Tool">
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T1" src="toolscuts/tool1.png" alt="Coping Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T2" src="toolscuts/tool2.png" alt="Clamp">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T3" src="toolscuts/tool3.png" alt="Hand Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T4" src="toolscuts/tool4.png" alt="Drill">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T5" src="toolscuts/tool5.png" alt="Eyelet Puncher (idk bruh dont ask me, Fleur chose these)">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T6" src="toolscuts/tool6.png" alt="Flathead Screwdriver">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T7" src="toolscuts/tool7.png" alt="Pull Saw">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T8" src="toolscuts/tool8.png" alt="Philips Screwdriver">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable" id="T9" src="toolscuts/tool9.png" alt="Toy Shovel">
+      </div>
+    </div>
+  </div>
+  <div class="flexAbs">
+    <div class="elements flex tabcontent" id="Element">
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="E1" src="elementscuts/fire.png" alt="fire">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="E2" src="elementscuts/soil.png" alt="soil">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="E3" src="elementscuts/water.png" alt="water">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="E4" src="elementscuts/wind.png" alt="wind">
+      </div>
+    </div>
+  </div>
+  <div class="flexAbs">
+    <div class="senses flex tabcontent" id="Sense">
+      <!-- replace the .png's with the ones that correspond to the senses, then delete the extra lines-->
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S1" src="sensescuts/sense1.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S2" src="sensescuts/sense2.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S3" src="sensescuts/sense3.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S4" src="sensescuts/sense4.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S5" src="sensescuts/sense5.png" alt="Sense">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="S6" src="sensescuts/sense6.png" alt="Sense">
+      </div>
+    </div>
+  </div>
+  <div class="flexAbs">
+    <div class="organisms flex tabcontent" id="Organism">
+
+      <!-- not using the id's rn but keeping them just in case -->
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O1" src="organismcuts/organism1.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O2" src="organismcuts/organism2.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O3" src="organismcuts/organism3.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O4" src="organismcuts/organism4.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O5" src="organismcuts/organism5.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O6" src="organismcuts/organism6.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O7" src="organismcuts/organism7.png" alt="Organism">
+      </div>
+      <div class="dragWrapper">
+        <img  class="hallo draggable"  id="O8" src="organismcuts/organism8.png" alt="Organism">
+      </div>
+    </div>
+  </div>
+  <!-- for the bowl/where the creature gets created  -->
+
+  <!-- div for the two columns -->
+  <div class="flexBowl">
+  <div id="droppable" class="bowl">
+    <img class="thebowl" src="bowl.png" alt="A big metal bowl">
+	</div>
+  <div class="infoBox">
+  	  <h1>Build your Cyborg </h1>
+      <p> Drag at least three ingredients onto the plate</p>
+  	  <div id="hT1" class="hide">I am shown when someone hovers over the div above.</div>
+      <div id="hT2" class="hide">I am shown when you hover over the div above.</div>
+      <div  id="cookButton">
+        <a href="something"><img class="cooktime" src="cook.png" alt="cook"></a>
+      </div>
+</div>
+
+  <!-- <div  id="cookButton">
+    <a href="something"><img class="cooktime" src="cook.png" alt="cook"></a>
+  </div> -->
+
+  <!-- bottom buttons -->
+  <!-- <div class="bottom">
+  <button onclick="window.location.href='landingpage2.html'" class="btn2" id="Back">Back</button>
+  <button onclick="openSub(event, 'Aboutsub')" class="btn2 sublink" id="About">About</button>
+</div> -->
+
+<!-- the stuff about us goes here:::: -->
+<div class="abtcontent subwindow" id="Aboutsub">
+  <div class="flexAbs">
+    <img id="logoabt" src="logo.png"/>
+  </div>
+  <div class="abtText flexAbs">
+    <h1>Who we are</h1>
+    <p>this is a project about cyborgs</p>
+  </div>
+  <button class="btn2" onclick="this.parentElement.style.display='none'">Close About</button>
+</div>
+
+<script>
+
+// this is the js for the tabs
+function openTab(evt, whichTab) {
+  // Declare all variables
+  let i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(whichTab).style.display = "flex";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("Tooltab").click();
+
+// this is the js for the about not-a-popup
+function openSub(evt, sub) {
+  let i, subcontent, sublink;
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(sub).style.display = "block";
+}
+let addedIngredients = [];
+$(document).ready(function(){
+  $( ".dragWrapper" ).draggable();
+  $( "#droppable" ).droppable({
+    drop: function( event, ui ) {
+      $( this )
+      .addClass( "ui-state-highlight" )
+      .find( "p" )
+            .html( "Dropped!" );
+      // LET'S LOG THE ID OF THE DROPPED ELEMENT IN THE CONSOLE!
+      console.log(ui.draggable.context.querySelector("img").getAttribute("id"));
+      // ADD THE ID TO THE ARRAY
+      addedIngredients.push(ui.draggable.context.querySelector("img").getAttribute("id"));
+      // CHECK IF INGREDIENTS ARRAY IS LONG ENOUGH
+      // KEEP IN MIND THE NAMES FOR THE BUTTON AND CLASS I MADE UP...
+      if(addedIngredients.length >= 3) {
+        const arrayLink = "~/" + addedIngredients[0] + addedIngredients[1] + addedIngredients[2] + ".html"
+        $("#cookButton").addClass("showButton");
+        $("#cookButton a").attr("href", arrayLink);
+      }
+
+    }
+  });
+});
+//
+//   $( function() {
+//
+// } );
+//
+// $( function() {
+//   $( "#draggable" ).draggable();
+//
+// } );
+let hoverelseT1 = document.getElementById("T1");
+hoverelseT1.addEventListener("mouseover", function( event ) {
+  document.querySelector('#hT1').style.display = "block"
+}, false);
+hoverelseT1.addEventListener("mouseleave", function( event ) {
+  document.querySelector('#hT1').style.display = "none"
+}, false);
+
+let hoverelseT2 = document.getElementById("T2");
+hoverelseT2.addEventListener("mouseover", function( event ) {
+  document.querySelector('#hT2').style.display = "block"
+}, false);
+hoverelseT2.addEventListener("mouseleave", function( event ) {
+  document.querySelector('#hT2').style.display = "none"
+}, false);
+
+
+
+</script>
+</body>
+</html>

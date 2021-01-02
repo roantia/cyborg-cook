@@ -1,0 +1,260 @@
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: radial-gradient(#000000, #ffffff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: url(robot.png), auto;
+}
+
+.flexAbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*  margin-bottom: 20px;
+*/}
+
+.flexBowl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexTabs {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 63vw;
+}
+
+.borderBottom {
+	border-bottom: 2px black;
+}
+
+#logo {
+  width: 20vw;
+  display: none;
+
+}
+.hide {
+  display: none;
+  font-family: 'Helvetica Neue Regular', sans-serif;
+}
+/*
+.myDIV:hover + .hide {
+  display: flex;
+  color: blue;
+} */
+
+/* top tab buttons */
+.btn {
+  top: 15vh;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: none;
+  outline: none;
+
+/*  cursor: pointer;
+*/}
+
+/* other buttons */
+.btn2 {
+  position: absolute;
+  top: 5vh;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  /* cursor: pointer; */
+}
+
+.tabs button {
+  color: black;
+}
+
+.tabs button:hover {
+  color: red;
+}
+
+/* current tab indicator !!!!fleur here it is!!!! */
+.tabs button.active {
+  background-color: none;
+  border-radius: 10px;
+  color: red;
+}
+
+/* tab content default */
+.tabcontent{
+  display: none;
+}
+
+/* the container for the flexbox images */
+.flex {
+  display: none;
+  flex-wrap: wrap;
+  padding: 1vw;
+  top: 18vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+/* the contents for the flexbox */
+.hallo {
+  height: 5vw;
+  z-index: -1;
+  max-height: 100vh;
+  max-width: 100vw;
+  object-fit: contain;
+  padding: 1vw;
+}
+
+.dragWrapper {
+  display: inline-block;
+}
+
+/* the original placing for the images who are now in flexboxes */
+/* #Organism1 {
+  left: 32%;
+}
+
+#Organism2 {
+  left: 25%;
+}
+
+#Organism3 {
+  left: 17%;
+}
+
+#Organism4 {
+  left: 8%;
+}
+
+#Organism5 {
+  left: 4%;
+}
+
+#Organism6 {
+  left: 56%;
+}
+
+#Organism7 {
+  left: 50%;
+}
+
+#Organism8 {
+  left: 44%;
+}
+
+#Organism9 {
+  left: 38%;
+}
+
+#Organism10 {
+  left: 61%;
+} */
+
+/* clicky tab stuff */
+#Tooltab {
+  left: 10vw;
+}
+
+#Elementtab {
+  left: 40vw;
+}
+
+#Sensetab {
+  left: 60vw;
+}
+
+#Organismtab {
+  left: 80vw;
+}
+
+/* bowl time */
+.thebowl {
+  z-index: -2;
+  max-width: 50vw;
+  top: 50vh;
+  max-height: 70vh;
+/*  margin-top: 20px;
+*/}
+
+.infoBox{
+  width: 45vw;
+  height: 50vh;
+  background-color: orange;
+
+}
+
+/* .ui-state-highlight{
+  transform: rotate(180deg);
+} */
+
+/* bottom buttons */
+#Back {
+  left: 20px;
+}
+
+
+/* about toggle thingy */
+.abtcontent {
+  display: none;
+}
+/* how the about thing looks */
+.subwindow {
+  z-index: 10;
+  opacity:1;
+  background-image: radial-gradient(#000000, #ffffff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+}
+
+#logoabt {
+  width: 20vw;
+  left: 50vw;
+  top: 5vh;
+  z-index: 11;
+
+}
+.abtText {
+  margin-top: 10vh;
+  top: 25vh;
+
+}
+.btn:hover {background: transparent;}
+.btn2:hover {background: transparent;}
+
+#cookButton{
+  display: none;
+}
+#cookButton.showButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cooktime {
+  width: 25vw;
+  /* height: 5vh; */
+
+}
+
+
+/* no longer in use:: */
+/*
+.Tool {color: black;}
+.Elements {color: black;}
+.Senses {color: black;}
+.Organism {color: black;}
+.Back {color: black;}
+.About {color: black;} */
