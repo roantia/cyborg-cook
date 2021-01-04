@@ -140,6 +140,7 @@ p {
   .iframe {
     width: 33vw;
     height: 90vh;
+    border: none;
   }
 
 }
@@ -214,6 +215,8 @@ p {
   .iframe {
     height: 30vh;
     width: 100vw;
+    border: none;
+
   }
 }
 /* tooltipfun */
