@@ -74,14 +74,14 @@ This specific clip can hold together different types of lifeforms.</span>
       <p id="plateInstructions">DRAG AND DROP THREE <br>
         INGREDIENTS ONTO <br>
         THE PLATE <br>
-        <button onclick="openSubI(event, 'Iframesub')" class="btn2 subiframe" id="iframe">COOK</button></p>
+        <button onclick="openSubI(event, 'Iframesub')" class="btn2 subiframe" id="cookButton">COOK</button></p>
       </div>
 
       <div class="iframecontent subwindowI" id="Iframesub">
         <div class="iframeframe">
           <iframe class="iframe" id="iframe1" src="" title="first thing dragged"></iframe>
-          <iframe class="iframe" id="iframe2" src="" title="first thing dragged"></iframe>
-          <iframe class="iframe" id="iframe3" src="" title="first thing dragged"></iframe>
+          <iframe class="iframe" id="iframe2" src="" title="second thing dragged"></iframe>
+          <iframe class="iframe" id="iframe3" src="" title="third thing dragged"></iframe>
 
         </div>
         <button class="btn2 abtText" onclick="this.parentElement.style.display='none'"><br>←</button>
@@ -193,7 +193,7 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
           const firstLink = addedIngredients[0]
           const secondLink = addedIngredients[1]
           const thirdLink = addedIngredients[2]
-          // $("#cookButton").addClass("showButton");
+          $("#cookButton").addClass("showButton");
           // $("#plateInstructions a").attr("href", arrayLink);
           $("#iframe1").attr("src", firstLink);
           $("#iframe2").attr("src", secondLink);
