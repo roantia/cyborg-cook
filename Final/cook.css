@@ -54,13 +54,19 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  position: absolute;
 }
 #plateInstructions {
   z-index: 2;
-  position: fixed;
-  top: 45vh;
-}
 
+}
+.platestuff {
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
 /* for when it is wider than tall */
 @media (min-aspect-ratio: 1/1) {
   /* .circle-container {
