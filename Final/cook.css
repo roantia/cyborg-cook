@@ -129,6 +129,19 @@ p {
     left: calc(30vh + 50vw - 3.5vw - 50vh);
     top: 3.00vh;
   }
+  .iframeframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    z-index: 1;
+    flex-direction: row;
+  }
+  .iframe {
+    width: 33vw;
+    height: 90vh;
+  }
+
 }
 /* for when it is taller than wide */
 @media (max-aspect-ratio: 1/1) {
@@ -181,7 +194,7 @@ p {
   .deg270 {
     left: 10vw;
     top: calc(50vw + 50vh - 2.5vh - 50vw);
-  }f
+  }
   .deg300 {
     left: 13.36vw;
     top: calc(30vw + 50vh - 2.5vh - 50vw);
@@ -189,6 +202,18 @@ p {
   .deg330 {
     left: 30vw;
     top: calc(13.36vw + 50vh - 2.5vh - 50vw);
+  }
+  .iframeframe {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    z-index: 1;
+    flex-direction: column;
+  }
+  .iframe {
+    height: 30vh;
+    width: 100vw;
   }
 }
 /* tooltipfun */
@@ -223,7 +248,7 @@ p {
 .tooltip2 {
   position:relative;
 }
- 
+
 .tooltip2 span {
   display:none;
   -moz-border-radius:6px;
@@ -231,15 +256,15 @@ p {
   border-radius:6px;
   color:black;
 }
- 
+
 .tooltip2 span img {
   float:left;
-   height: auto; 
-   width: auto; 
-   max-width: 19vw; 
+   height: auto;
+   width: auto;
+   max-width: 19vw;
   /*position: absolute;*/
 }
- 
+
 .tooltip2:hover span {
   display:block;
   position:absolute;
@@ -340,10 +365,27 @@ a:hover {
   top:0px;
   left:0px;
 }
+
+.iframecontent {
+  display: none;
+}
+/* how the link thing looks */
+.subwindowI {
+  z-index: 11;
+  opacity:1;
+  background-color: #ffff00;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+}
+
+
 h1 {
   text-align: center;
-
 }
+
 .abtText {
 	padding: 2vw;
 	text-align: left;
