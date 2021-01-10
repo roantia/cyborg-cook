@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   cursor: url(hand.png), auto;
-  font-family: "Suisse Int'l Medium", Helvetica, sans-serif;
+  font-family: "Suisse Int'l Medium", Arial, sans-serif;
 
 }
 body, html {
@@ -307,6 +307,7 @@ p {
   justify-content: space-between;
   padding: 2vw;
   color: black;
+  font-size: 18px;
 
 }
 /* unvisited link */
@@ -323,7 +324,9 @@ a:visited {
 a:hover {
   color: blue;
 }
-
+/*.links{
+  font-family: "Suisse Neue Medium", Times New Roman, serif;
+}*/
 #cookButton{
   display: none;
 }
@@ -337,6 +340,7 @@ a:hover {
   padding: 2vw;
   bottom: 0;
   justify-content: space-between;
+  font-size: 18px;
 }
 
 #cook {
@@ -352,6 +356,7 @@ a:hover {
   background-color: transparent;
   font-size: 16px;
   outline:none;
+  font-size: 18px;
 }
 
 .btn2:hover {
@@ -393,6 +398,7 @@ a:hover {
 
 .iframecontent {
   display: none;
+
 }
 /* how the link thing looks */
 .subwindowI {
@@ -404,6 +410,30 @@ a:hover {
   height:100vh;
   top:0px;
   left:0px;
+}
+
+.scrollbars {
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 }
 
 
