@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="topButtons">
-    <a href="Cyborg Manifesto.pdf" class="yourlink" style="text-decoration: none">A Cyborg Manifesto</a>
+    <a href="http://users.uoa.gr/~cdokou/HarawayCyborgManifesto.pdf" class="yourlink" style="text-decoration: none">A Cyborg Manifesto</a>
     <a href="https://youtu.be/hBMlGmwJMuw" class="yourlink1" style="text-decoration: none">Cooking With Soul</a>
   </div>
 
@@ -74,8 +74,23 @@ This specific clip can hold together different types of lifeforms.</span>
       <p id="plateInstructions">DRAG AND DROP THREE <br>
         INGREDIENTS ONTO <br>
         THE PLATE <br>
-        <a href="#" class="idlink">COOK</a></p>
+        <button onclick="openSubI(event, 'Iframesub')" class="btn2 subiframe" id="cookButton">COOK</button></p>
       </div>
+    </div>
+
+
+      <div class="iframecontent subwindowI" id="Iframesub">
+        <div class="iframeframe">
+          <iframe class="iframe" id="iframe1" src="" title="first thing dragged"></iframe>
+          <iframe class="iframe" id="iframe2" src="" title="second thing dragged"></iframe>
+          <iframe class="iframe" id="iframe3" src="" title="third thing dragged"></iframe>
+
+        </div>
+        <button class="btn2 abtText" onclick="this.parentElement.style.display='none'"><br>←</button>
+
+      </div>
+
+
 
       <div class="abtcontent subwindowA" id="Aboutsub">
         <div class="abtText">
@@ -86,7 +101,7 @@ This specific clip can hold together different types of lifeforms.</span>
 		  <a href="https://www.kabk.nl/en/" class="yourlink4" style="text-decoration: none"><u>Royal Academy of Art (KABK)</u></a><br>
 		  Interactive Media Design and Coding classes with
       <a href="http://www.sulsolsal.com/" class="yourlink6" style="text-decoration: none"><u>Hannes Bernard</u></a>
-      and 
+      and
       <a href="http://www.aptoptout.studio" class="yourlink7" style="text-decoration: none"><u>Martijn de Heer</u></a>
 
       <br><br> Made for educational purpose. <br>
@@ -96,10 +111,9 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
 
 
 
-
       <div class="linkcontent subwindowL" id="Linksub">
         <div class="abtText">
-          Are you hungry to discover more unconventional kinships? <br> Check the links below:<br> 
+          Are you hungry to discover more unconventional kinships? <br> Check the links below:<br>
           <a href="https://www.bbc.co.uk/programmes/p0397gt7" class="yourlink5 tooltip2" style="text-decoration: none"><u><br>Technology Change And Women</u><span><img src="link1.jpg"></span></a>
 
           <a href="https://www.thesun.co.uk/tech/9325421/plant-switching-sex-gender-fluid/" class="yourlink14 tooltip2" style="text-decoration: none"><u><br>Gender Fluid Plant</u><span><img src="link7.jpg"></span></a>
@@ -111,7 +125,7 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
           <a href="https://scholar.maryflanagan.com/wp-content/uploads/ReloadHyperbodies.pdf" class="yourlink10 tooltip2" style="text-decoration: none"><u><br>Hyperbodies, Hyperknowledge: Women in Games,<br> Women In Cyberpunk, And Strategies Of Resistance</u><span><img src="link3.jpg"></span></a>
 
           <a href="https://spectrum.ieee.org/geek-life/profiles/steve-mann-my-augmediated-life" class="yourlink16 tooltip2" style="text-decoration: none"><u><br>Digital Eye</u><span><img src="link9.jpg"></span></a>
-        
+
 
           <a href="https://www.youtube.com/watch?v=qV64XgFQFUg" class="yourlink11 tooltip2" style="text-decoration: none"><u><br>Games Change How We Think</u><span><img src="link4.jpg"></span></a>
 
@@ -134,14 +148,10 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
 
 
       <div class="bottomButtons">
-        <button onclick="openSubA(event, 'Aboutsub')" class="btn2 subabt" id="About">About</button>
-         <button onclick="openSubL(event, 'Linksub')" class="btn2 sublink" id="Links">Links</button>
+        <button onclick="openSubA(event, 'Aboutsub')" class="btn2 subabt" id="About">More info</button>
+        <button onclick="openSubL(event, 'Linksub')" class="btn2 sublink" id="Links">Links</button>
       </div>
 
-  
-
-
-    </div>
   </div>
   <script>
 
@@ -156,6 +166,12 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
     let i, subcontentL, sublink;
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(subL).style.display = "block";
+  }
+
+  function openSubI(evt, subI) {
+    let i, subcontentI, subiframe;
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(subI).style.display = "block";
   }
 
   let addedIngredients = [];
@@ -178,14 +194,18 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
           const firstLink = addedIngredients[0]
           const secondLink = addedIngredients[1]
           const thirdLink = addedIngredients[2]
-          // $("#cookButton").addClass("showButton");
+          $("#cookButton").addClass("showButton");
           // $("#plateInstructions a").attr("href", arrayLink);
-          $("a.idlink").click(function(e) {
-            e.preventDefault();
-            window.open(firstLink);
-            window.open(secondLink);
-            window.open(thirdLink);
-          });
+          $("#iframe1").attr("src", firstLink);
+          $("#iframe2").attr("src", secondLink);
+          $("#iframe3").attr("src", thirdLink);
+
+          // $("a.idlink").click(function(e) {
+          //   e.preventDefault();
+          //   window.open(firstLink);
+          //   window.open(secondLink);
+          //   window.open(thirdLink);
+          // });
         }
 
       }
@@ -194,7 +214,7 @@ Typeface Suisse Int'l 'Medium' by Swiss Typefaces.</div>
 
   $('a.yourlink').click(function(e) {
     e.preventDefault();
-    window.open('Cyborg Manifesto.pdf');
+    window.open('http://users.uoa.gr/~cdokou/HarawayCyborgManifesto.pdf');
 });
 
   $('a.yourlink1').click(function(e) {
